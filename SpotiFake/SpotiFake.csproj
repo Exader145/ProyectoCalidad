@@ -147,14 +147,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906191647403_migracion2.cs" />
-    <Compile Include="Migrations\201906191647403_migracion2.Designer.cs">
-      <DependentUpon>201906191647403_migracion2.cs</DependentUpon>
+    <Compile Include="Migrations\201906202338593_InitDatabase.cs" />
+    <Compile Include="Migrations\201906202338593_InitDatabase.Designer.cs">
+      <DependentUpon>201906202338593_InitDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cancion.cs" />
     <Compile Include="Models\CancionesEscuchadas.cs" />
-    <Compile Include="Models\DetalleContactos.cs" />
     <Compile Include="Models\ListaReproduccion_Cancion.cs" />
     <Compile Include="Models\ListaReproduccion.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -252,8 +251,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906191647403_migracion2.resx">
-      <DependentUpon>201906191647403_migracion2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906202338593_InitDatabase.resx">
+      <DependentUpon>201906202338593_InitDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
