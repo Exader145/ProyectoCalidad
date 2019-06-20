@@ -154,7 +154,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cancion.cs" />
     <Compile Include="Models\CancionesEscuchadas.cs" />
-    <Compile Include="Models\DetalleContactos.cs" />
     <Compile Include="Models\ListaReproduccion_Cancion.cs" />
     <Compile Include="Models\ListaReproduccion.cs" />
     <Compile Include="Models\Usuario.cs" />
