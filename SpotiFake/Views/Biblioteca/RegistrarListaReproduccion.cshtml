@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h2>RegistrarListaReproduccion</h2>
+
+<div class="row">
+
+    <div class="col-md-6 col-md-offset-3">
+
+        <form action="/Biblioteca/AgregarListaDeReproduccion" method="post">
+            <div class="form-group">
+                <label>Nombre de la Lista </label>
+                <input class="form-control" name="nombre" value="@Model.nombre" required />
+            </div>
+            
+            <button class="btn-danger"  name="idUsuario" value="@Session["IdUsuario"]">Guardar</button>
+
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,49 @@
+﻿
+@{Layout = "~/Views/Shared/_LayoutSys.cshtml"; }
+
+<div class="row">
+
+    <div class="col-md-6 col-md-offset-3">
+
+        <form action="/Cancion/agregar" method="post">
+
+            <h3>Registro de canción</h3>
+            <hr />
+
+            <div class="form-group">
+                <label>Nombre de canción</label>
+                <input class="form-control" name="nombre" value="@Model.nombre" required />
+            </div>
+
+            <div class="form-group">
+                <label>Nombre de artista</label>
+                <input class="form-control" name="artista" value="@Model.artista" required />
+            </div>
+            <div class="form-group">
+                <label>Nombre de álbum</label>
+                <input class="form-control" name="album" value="@Model.album" required/>
+            </div>
+            <div class="form-group">
+                <label>Género</label>
+                <input class="form-control" name="genero" value="@Model.genero" />
+            </div>
+            <div class="form-group">
+                <label>Duración de canción</label>
+                <input class="form-control" name="duracionCancion" value="@Model.duracionCancion" required/>
+            </div>
+            <div class="form-group">
+                <label>Fecha de lanzamiento</label>
+                <input class="form-control" type="date" name="fechaLanzamiento" value="@Model.fechaLanzamiento"required />
+            </div>
+            <div class="form-group">
+                <label>Nombre de imagen</label>
+                <input class="form-control" name="imagen" value="@Model.imagen" />
+            </div>
+
+            <button class="btn-danger">Guardar</button>
+
+        </form>
+    </div>
+
+</div>
+

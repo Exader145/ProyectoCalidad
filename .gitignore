@@ -1,0 +1,7 @@
+.vs/
+.sonarqube/
+Migrations/
+packages/
+debug.log
+bin/
+obj/

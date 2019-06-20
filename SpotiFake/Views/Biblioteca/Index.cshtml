@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+<br />
+<form action="/Biblioteca/RegistrarListaReproduccion" method="post">
+    <button class="btn-danger">Nueva Lista de reproduccion</button>
+</form>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ListaReproduccion in Model)
+        {
+        <tr>
+            <td>@ListaReproduccion.nombre</td>
+            <td>
+                <form action="/Biblioteca/Detalle" method="post">
+                <button name="idListaReproduccion" value="@ListaReproduccion.idListaReproduccion" class="btn btn-primary">Detalle</button>
+                </form>
+            </td>
+            <td>
+                <form action="/Biblioteca/EliminarListRe" method="post">
+                    <input name="idListaReproduccion" value="@ListaReproduccion.idListaReproduccion" style="display:none" />
+                    <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+

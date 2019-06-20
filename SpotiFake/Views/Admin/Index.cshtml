@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutSys.cshtml";
+
+ }
+<br />
+<form action="/Admin/FormularioAdmin" method="post">
+    <button class="btn-danger">Registrar Administrador</button>
+</form>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombres</th>
+            <th>Correo Electronico</th>
+            <th>Fecha de creacion de cuenta </th>
+            @*<th>Sexo</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Admin in Model)
+        {
+            <tr>
+
+                <td>@Admin.nombre</td>
+                <td>@Admin.correoElectronico</td>
+                <td>@Admin.fechaCreación</td>
+                @*<td>@Admin.sexo</td>*@
+                <td>
+                    <a href="/Admin/FormularioModificar?id=@Admin.idUsuario">EDITAR</a>|
+                    <a href="/Admin/eliminar?id=@Admin.idUsuario">ELIMINAR</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

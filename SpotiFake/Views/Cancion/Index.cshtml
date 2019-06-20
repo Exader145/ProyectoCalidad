@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Canciones";
+}
+
+<br />
+<form action="/Cancion/registrarCancion" method="post">
+    <button class="btn-danger">Registrar canción</button>
+</form>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Portada</th>
+            <th>Nombre de canción</th>
+            <th>Nombre de artista </th>
+            <th>Nombre de álbum</th>
+            <th>Género</th>
+            <th>Duración de canción</th>
+            <th>Fecha de lanzamiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cancion in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/Images/@cancion.imagen"
+                         width="80"
+                         height="80" />
+                </td>
+                <td>@cancion.nombre</td>
+                <td>@cancion.artista</td>
+                <td>@cancion.album</td>
+                <td>@cancion.genero</td>
+                <td>@cancion.duracionCancion</td>
+                <td>@cancion.fechaLanzamiento</td>
+                <td>
+                    <a href="/Cancion/modificar?id=@cancion.idCancion">EDITAR</a>|
+                    <a href="/Cancion/eliminar?id=@cancion.idCancion">ELIMINAR</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+

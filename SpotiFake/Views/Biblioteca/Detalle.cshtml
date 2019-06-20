@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml"; ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle</h2>
+
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Portada</th>
+            <th>Nombre de canción</th>
+            <th>Nombre de artista </th>
+            <th>Género</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var ListReproduc_Songs in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/Images/@ListReproduc_Songs.cancion.imagen"
+                         width="80"
+                         height="80" />
+                </td>
+                <td>@ListReproduc_Songs.cancion.nombre</td>
+                <td>@ListReproduc_Songs.cancion.artista</td>
+                <td>@ListReproduc_Songs.cancion.genero</td>
+                <td>
+                    <form action="/Usuario/ReproducirCancion" method="post">
+                        <input name="idC" value="@ListReproduc_Songs.cancion.idCancion" style="display:none" />
+                        <button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">reproducir</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="">
+                        <input name="idC" value="@ListReproduc_Songs.cancion.idCancion" style="display:none" />
+                        <button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,8 @@
+﻿
+body {
+    background-image: url('cassette_tape_drawing-wallpaper-1920x1080.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Roboto;
+    font: 600 16px/18px 'Open Sans',sans-serif;
+}

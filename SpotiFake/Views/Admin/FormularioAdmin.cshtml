@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutSys.cshtml";
+    ViewBag.tittle = "Administrador";
+ }
+
+<div class="row">
+
+    <div class="col-md-6 col-md-offset-3">
+
+        <form action="/Admin/agregar" method="post">
+
+            <h3>Registro de administrador</h3>
+            <hr />
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <input class="form-control" name="nombre" value="@Model.nombre" required />
+            </div>
+
+            <div class="form-group">
+                <label>Correo Electronico</label>
+                <input class="form-control" name="correoElectronico" value="@Model.correoElectronico" required />
+            </div>
+            <div class="form-group">
+                <label>contraseña</label>
+                <input class="form-control" name="contraseña" value="@Model.contraseña"required />
+            </div>
+            @*<div class="form-group">
+
+                <input type="radio" name="sexo" id="Hombre" value="@Model.sexo Hombre" />
+                <label for="Hombre">Hombre</label>
+
+                <input type="radio" name="sexo" id="Mujer" value="@Model.sexo Mujer" />
+                <label for="Mujer">Mujer</label>
+            </div>*@
+            <button class="btn-danger">Guardar</button>
+
+        </form>
+    </div>
+
+</div>
+

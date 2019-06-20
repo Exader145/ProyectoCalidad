@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+}
+
+<h2>Historial</h2>
+
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Portada</th>
+            <th>Nombre de canción</th>
+            <th>Nombre de artista </th>
+            <th>Género</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cancion in Model)
+         {
+            <tr>
+                <td>
+                    <img src="~/Images/@cancion.cancion.imagen"
+                         width="80"
+                         height="80" />
+                </td>
+                <td>@cancion.cancion.nombre</td>
+                <td>@cancion.cancion.artista</td>
+                <td>@cancion.cancion.genero</td>
+                <td>
+                    <form action="/Usuario/Reproducir" method="post">
+                        <input name="id" value="@cancion.cancion.idCancion" style="display:none" />
+                        <button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">REPRODUCIR</button>
+                    </form>
+
+                </td>
+                <td>
+                    <form action="/Biblioteca/SeleccionarPlaylist" method="post">
+                        <input name="idC" value="@cancion.cancion.idCancion" style="display:none" />
+
+                        <button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">AGREGAR A PLAYLIST</button>
+
+                    </form>
+                </td>
+            </tr>
+         }
+    </tbody>
+</table>
