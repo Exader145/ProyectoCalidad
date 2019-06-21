@@ -149,13 +149,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906202338593_InitDatabase.cs" />
-    <Compile Include="Migrations\201906202338593_InitDatabase.Designer.cs">
-      <DependentUpon>201906202338593_InitDatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906210021029_InitDatabase1.cs" />
-    <Compile Include="Migrations\201906210021029_InitDatabase1.Designer.cs">
-      <DependentUpon>201906210021029_InitDatabase1.cs</DependentUpon>
+    <Compile Include="Migrations\201906210054400_khsdf.cs" />
+    <Compile Include="Migrations\201906210054400_khsdf.Designer.cs">
+      <DependentUpon>201906210054400_khsdf.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cancion.cs" />
@@ -259,11 +255,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906202338593_InitDatabase.resx">
-      <DependentUpon>201906202338593_InitDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906210021029_InitDatabase1.resx">
-      <DependentUpon>201906210021029_InitDatabase1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906210054400_khsdf.resx">
+      <DependentUpon>201906210054400_khsdf.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
