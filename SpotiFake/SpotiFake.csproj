@@ -135,6 +135,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BibliotecaController.cs" />
     <Compile Include="Controllers\CancionController.cs" />
+    <Compile Include="Controllers\ContactoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -151,6 +152,10 @@
     <Compile Include="Migrations\201906202338593_InitDatabase.cs" />
     <Compile Include="Migrations\201906202338593_InitDatabase.Designer.cs">
       <DependentUpon>201906202338593_InitDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210021029_InitDatabase1.cs" />
+    <Compile Include="Migrations\201906210021029_InitDatabase1.Designer.cs">
+      <DependentUpon>201906210021029_InitDatabase1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cancion.cs" />
@@ -235,6 +240,7 @@
     <Content Include="Views\Usuario\Historial.cshtml" />
     <Content Include="Views\Biblioteca\SeleccionarPlaylist.cshtml" />
     <Content Include="Views\Biblioteca\Detalle.cshtml" />
+    <Content Include="Views\Contacto\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -255,6 +261,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201906202338593_InitDatabase.resx">
       <DependentUpon>201906202338593_InitDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210021029_InitDatabase1.resx">
+      <DependentUpon>201906210021029_InitDatabase1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
