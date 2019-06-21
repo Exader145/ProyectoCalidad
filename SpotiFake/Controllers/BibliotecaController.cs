@@ -11,21 +11,26 @@ namespace SpotiFake.Controllers
 {
     public class BibliotecaController : Controller
     {
+
         SpotiFakeContext spotiFakeContext = new SpotiFakeContext();
+
         [Authorize]
         public ActionResult Index(int idUsuario)
         {
             var listaReproduccion = spotiFakeContext.ListaReproduccions.Where(o => o.idUsuario == idUsuario).ToList();
             return View(listaReproduccion);
         }
+
         public ViewResult RegistrarListaReproduccion()
         {
             return View( new ListaReproduccion());
         }
+
         public ActionResult AgregarListaDeReproduccion(ListaReproduccion LS, int idUsuario)
         {
             
             var listReproducRepetida = spotiFakeContext.ListaReproduccions.Where(o => o.idUsuario == idUsuario&&o.nombre==LS.nombre).FirstOrDefault();
+
             if (listReproducRepetida==null)
             {
                 LS.idUsuario = idUsuario;
@@ -36,9 +41,12 @@ namespace SpotiFake.Controllers
             {
                 //nostrar mensaje que la lista agregada ya existe
             }
+
             var ListaReproduciones = spotiFakeContext.ListaReproduccions.Where(o => o.idUsuario == idUsuario).ToList();
+
             return View("Index", ListaReproduciones);
         }
+
         [Authorize]
         public ViewResult SeleccionarPlaylist(int idC, int idU)
         {
@@ -46,6 +54,7 @@ namespace SpotiFake.Controllers
             var Playlist = spotiFakeContext.ListaReproduccions.Where(o => o.idUsuario == idU);
             return View(Playlist);
         }
+
         [Authorize]
         public ViewResult EliminarListRe(int idListaReproduccion, int idUsuario)
         {
@@ -72,8 +81,10 @@ namespace SpotiFake.Controllers
             {
                 //mostrar mensaje que la cancion ya se encuentra en la lista de reproduccion
             }
+
             return RedirectToAction("UsuarioIndex", "Usuario");
         }
+
         public ActionResult Detalle(int idListaReproduccion)
         {
             var ListCanciones = spotiFakeContext.listaReproduccion_Cancion.Where(o=>o.idListaReproduccion==idListaReproduccion).Include(o => o.cancion).ToList();

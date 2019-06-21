@@ -18,10 +18,12 @@ namespace SpotiFake.Controllers
         {
             return View();
         }
+
         public ViewResult messenge()
         {
             return View();
         }
+
         public ActionResult Ingreso(Usuario usuario)
         {
             Usuario usuarioRegistradoBD = spotiFakeContext.Usuarios.Where(o => o.correoElectronico == usuario.correoElectronico && o.contraseña == usuario.contraseña).FirstOrDefault();
@@ -30,22 +32,26 @@ namespace SpotiFake.Controllers
                 ViewBag.AccesoConfirmado = usuarioRegistradoBD;
                 Session["NombreUsuario"] = usuarioRegistradoBD.nombre;
                 Session["IdUsuario"] = usuarioRegistradoBD.idUsuario;
+
                 if (usuarioRegistradoBD.rol == "Admin")
                 {
                     FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
                     return RedirectToAction("AdminIndex", "Usuario");
                 }
+
                 if (usuarioRegistradoBD.rol == "Sys")
                 {
                     FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
                     return RedirectToAction("SysIndex", "Usuario");
                 }
+
                 if (usuarioRegistradoBD.rol == "Usuario")
                 {
                     FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
                     return RedirectToAction("UsuarioIndex", "Usuario");
                 }
             }
+
             return View("messenge");
 
         }
