@@ -1,0 +1,34 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>AGREGAR AMIGOS</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombres</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.nombre</td>
+                @*<td>
+                        <a href="/Cancion/modificar?id=@usuario.idUsuario">AÑADIR A AMIGOS</a>
+                    </td>*@
+                <td>
+                    <form action="/Contacto/AgregarAmigo" method="post">
+                        <input name="idContacto" value="@usuario.idUsuario" style="display:none" />
+                        <button name="idUsuario" value="1" class="btn btn-primary">Añadir a amigos</button>
+                        @*<button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">Añadir a amigos</button>*@
+                    </form>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
