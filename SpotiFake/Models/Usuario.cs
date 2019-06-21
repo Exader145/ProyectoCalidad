@@ -16,5 +16,6 @@ namespace SpotiFake.Models
 
         public List<ListaReproduccion> listaReproduccion { get; set; }
         public List<CancionesEscuchadas> cancionesEscuchadas { get; set; }
+        public List<DetalleUsuario> detalleUsuario { get; set; }
     }
 }

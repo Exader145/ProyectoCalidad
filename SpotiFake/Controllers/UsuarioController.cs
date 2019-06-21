@@ -12,24 +12,29 @@ namespace SpotiFake.Controllers
 {
     public class UsuarioController : Controller
     {
+
         SpotiFakeContext spotiFakeContext = new SpotiFakeContext();
+
         [Authorize]
         public ActionResult SysIndex()
         {
             return View();
         }
+
         [Authorize]
         [HttpPost]
         public ActionResult AdminIndex(Usuario usuario)
         {
             return View();
         }
+
         [Authorize]
         [HttpGet]
         public ActionResult AdminIndex()
         {
             return View();
         }
+
         [Authorize]
         [HttpPost]
         public ActionResult UsuarioIndex(int idUsuario)//metodo para navegar
@@ -37,6 +42,7 @@ namespace SpotiFake.Controllers
             var cancion = spotiFakeContext.Cancions.ToList();
             return View(cancion);
         }
+
         [Authorize]
         [HttpGet]
         public ActionResult UsuarioIndex()//metodo para ingresar
@@ -44,11 +50,13 @@ namespace SpotiFake.Controllers
             var cancion = spotiFakeContext.Cancions.ToList();
             return View(cancion);
         }
+
         public ActionResult logOff()
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Login");
         }
+
         public ActionResult GuardarUsuario(Usuario usuario)
         {
             if (spotiFakeContext.Usuarios.Any(o => o.correoElectronico == usuario.correoElectronico))
@@ -63,6 +71,7 @@ namespace SpotiFake.Controllers
             FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
             return RedirectToAction("UsuarioIndex");
         }
+
         public ViewResult NuevoUsuario()
         {
             return View("NuevoUsuario", new Usuario());

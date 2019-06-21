@@ -140,6 +140,7 @@
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DataBase\Mapeo\MapCancion.cs" />
     <Compile Include="DataBase\Mapeo\MapCancionesEscuchadas.cs" />
+    <Compile Include="DataBase\Mapeo\MapDetalleUsuario.cs" />
     <Compile Include="DataBase\Mapeo\MapListaReproducion_Cancion.cs" />
     <Compile Include="DataBase\Mapeo\MapListaReproduccion.cs" />
     <Compile Include="DataBase\Mapeo\MapUsuario.cs" />
@@ -154,6 +155,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cancion.cs" />
     <Compile Include="Models\CancionesEscuchadas.cs" />
+    <Compile Include="Models\DetalleUsuario.cs" />
     <Compile Include="Models\ListaReproduccion_Cancion.cs" />
     <Compile Include="Models\ListaReproduccion.cs" />
     <Compile Include="Models\Usuario.cs" />

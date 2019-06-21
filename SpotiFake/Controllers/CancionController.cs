@@ -19,21 +19,25 @@ namespace SpotiFake.Controllers
             var cancion = spotiFakeContext.Cancions.ToList();
             return View(cancion);
         }
+
         public ActionResult IndexSys()
         //el motivo de este metodo es para que a travez del layout no se colen los administradores a la interfaz del sys
         {
             var cancion = spotiFakeContext.Cancions.ToList();
             return View(cancion);
         }
+
         public ViewResult registrarCancion()
         {
             return View("FormularioCancion",new Cancion());
         }
+
         public ViewResult registrarCancionSys()
         //el motivo de este metodo es para que a travez del layout no se colen los administradores a la interfaz del sys
         {
             return View(new Cancion());
         }
+
         public ActionResult agregar(Cancion cancion)
         {
             spotiFakeContext.Cancions.Add(cancion);
@@ -41,6 +45,7 @@ namespace SpotiFake.Controllers
             spotiFakeContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
         public ActionResult agregarSys(Cancion cancion)
         {
             spotiFakeContext.Cancions.Add(cancion);
@@ -48,11 +53,13 @@ namespace SpotiFake.Controllers
             spotiFakeContext.SaveChanges();
             return RedirectToAction("IndexSys");
         }
+
         public ViewResult modificar(int id)
         {
             var cancion = spotiFakeContext.Cancions.Where(o => o.idCancion == id).FirstOrDefault();
             return View("FormularioModificar", cancion);
         }
+
         public ViewResult modificarSys(int id)
         {
             var cancion = spotiFakeContext.Cancions.Where(o => o.idCancion == id).FirstOrDefault();
@@ -93,6 +100,7 @@ namespace SpotiFake.Controllers
             spotiFakeContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
         public RedirectToRouteResult eliminarSys(int id)
         {
             var cancion = spotiFakeContext.Cancions.Where(d => d.idCancion == id).FirstOrDefault();
@@ -100,6 +108,7 @@ namespace SpotiFake.Controllers
             spotiFakeContext.SaveChanges();
             return RedirectToAction("IndexSys");
         }
+
         public ActionResult logOff()
         {
             FormsAuthentication.SignOut();

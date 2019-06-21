@@ -15,6 +15,7 @@ namespace SpotiFake.DataBase
         public IDbSet<ListaReproduccion_Cancion> listaReproduccion_Cancion { get; set; }
         public IDbSet<ListaReproduccion> ListaReproduccions { get; set; }
         public IDbSet<Usuario> Usuarios { get; set; }
+        public IDbSet<DetalleUsuario> DetalleUsuarios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -25,6 +26,7 @@ namespace SpotiFake.DataBase
             modelBuilder.Configurations.Add(new MapListaReproducion_Cancion());
             modelBuilder.Configurations.Add(new MapListaReproduccion());
             modelBuilder.Configurations.Add(new MapUsuario());
+            modelBuilder.Configurations.Add(new MapDetalleUsuario());
         }
     }
 }
