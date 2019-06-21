@@ -31,7 +31,7 @@
                             <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Tu Biblioteca</button>
                             <br />
                         </form>
-                        
+
                     </li>
                     <li>
                         <br />
@@ -39,7 +39,7 @@
                             <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Canciones Recientes</button>
                             <br />
                         </form>
-                        
+
                     </li>
                     <li>
                         <br />
@@ -47,7 +47,15 @@
                             <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Explorar</button>
                             <br />
                         </form>
-                        
+
+                    </li>
+                    <li>
+                        <br />
+                        <form action="/Contacto/Index" method="post">
+                            <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Amigos</button>
+                            <br />
+                        </form>
+
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

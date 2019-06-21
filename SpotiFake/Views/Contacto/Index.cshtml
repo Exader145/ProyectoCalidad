@@ -1,7 +1,8 @@
 ﻿
 
 @{
-    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+    ViewBag.Title = "Contactos";
 }
 
 <h2>AGREGAR AMIGOS</h2>
@@ -23,7 +24,7 @@
                 <td>
                     <form action="/Contacto/AgregarAmigo" method="post">
                         <input name="idContacto" value="@usuario.idUsuario" style="display:none" />
-                        <button name="idUsuario" value="1" class="btn btn-primary">Añadir a amigos</button>
+                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">seguir </button><!--agregar session-->
                         @*<button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">Añadir a amigos</button>*@
                     </form>
                 </td>

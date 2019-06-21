@@ -5,3 +5,4 @@ packages/
 debug.log
 bin/
 obj/
+SpotiFake/SpotiFake.csproj
