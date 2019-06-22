@@ -57,9 +57,16 @@ namespace SpotiFake.Controllers
             //var ListaReproduciones = spotiFakeContext.ListaReproduccions.
             //    Where(o => o.idUsuario == idUsuario).ToList();
 
-            var listaReproducciones = service.agregarListaReproduccion(listaReproduccion, idUsuario);
+            var listaReproduccionRepetida = service.verificarListaReproduccionRepetida(listaReproduccion, idUsuario);
 
-            return View("Index", listaReproducciones);
+            if ( listaReproduccionRepetida == null)
+            {
+                service.agregarIdUsuarioAListaReproduccion(listaReproduccion, idUsuario);
+            }
+
+            var listaReproduccionUsuario = service.obtenerListaReproduccionPorUsuario(idUsuario);
+
+            return View("Index", listaReproduccionUsuario);
         }
 
         [Authorize]
@@ -69,7 +76,7 @@ namespace SpotiFake.Controllers
 
             //var playlist = spotiFakeContext.ListaReproduccions.Where(o => o.idUsuario == idUsuario);
 
-            var playlist = service.obtenerListaReproduccionPorUsuario(idUsuario);
+            var playlist = service.obtenerListaReproduccionPorUsuarioIQueriable(idUsuario);
 
             return View(playlist);
         }
@@ -104,7 +111,12 @@ namespace SpotiFake.Controllers
             //    //mostrar mensaje que la cancion ya se encuentra en la lista de reproduccion
             //}
 
-            service.agregarCancionAListaReproduccion(idCancion, idListaReproduccion);
+            var cancionRepetida = service.obtenerCancionRepetidaEnListaReproduccion_Cancion(idCancion, idListaReproduccion);
+
+            if(cancionRepetida == null)
+            {
+                service.agregarCancionAListaReproduccion(idCancion, idListaReproduccion);
+            }
 
             return RedirectToAction("UsuarioIndex", "Usuario");
         }

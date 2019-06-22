@@ -1,4 +1,6 @@
 ﻿using SpotiFake.DataBase;
+using SpotiFake.Interface;
+using SpotiFake.Interface.Managers;
 using SpotiFake.Models;
 using System;
 using System.Collections.Generic;
@@ -11,7 +13,16 @@ namespace SpotiFake.Controllers
 {
     public class LoginController : Controller
     {
-        SpotiFakeContext spotiFakeContext = new SpotiFakeContext();
+        //SpotiFakeContext spotiFakeContext = new SpotiFakeContext();
+
+        private ILoginService service;
+        private ISessionManager manager;
+
+        public LoginController(ILoginService service, ISessionManager manager)
+        {
+            this.service = service;
+            this.manager = manager;
+        }
 
         // GET: Login
         public ViewResult Index()
@@ -26,12 +37,20 @@ namespace SpotiFake.Controllers
 
         public ActionResult Ingreso(Usuario usuario)
         {
-            Usuario usuarioRegistradoBD = spotiFakeContext.Usuarios.Where(o => o.correoElectronico == usuario.correoElectronico && o.contraseña == usuario.contraseña).FirstOrDefault();
+            //Usuario usuarioRegistradoBD = spotiFakeContext.Usuarios.Where(o => o.correoElectronico == usuario.correoElectronico && o.contraseña == usuario.contraseña).FirstOrDefault();
+
+            var usuarioRegistradoBD = service.obtenerUsuarioRegistrado(usuario);
+
             if (usuarioRegistradoBD!=null)
             {
                 ViewBag.AccesoConfirmado = usuarioRegistradoBD;
-                Session["NombreUsuario"] = usuarioRegistradoBD.nombre;
-                Session["IdUsuario"] = usuarioRegistradoBD.idUsuario;
+
+                //Session["NombreUsuario"] = usuarioRegistradoBD.nombre;
+                //Session["IdUsuario"] = usuarioRegistradoBD.idUsuario;
+
+                manager.SetIdUsuario(usuarioRegistradoBD.idUsuario);
+                manager.SetNombreUsuario(usuarioRegistradoBD.nombre);
+
 
                 if (usuarioRegistradoBD.rol == "Admin")
                 {

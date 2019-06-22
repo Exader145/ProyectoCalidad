@@ -47,13 +47,17 @@ namespace SpotiFake.TEST.ControllersTest
             };
 
             var mock = new Mock<IBibliotecaService>();
-            mock.Setup(o => o.agregarListaReproduccion(listaReproduccion, idUsuario));
+            mock.Setup(o => o.verificarListaReproduccionRepetida(listaReproduccion, idUsuario));
+            mock.Setup(o => o.agregarIdUsuarioAListaReproduccion(listaReproduccion, idUsuario));
+            mock.Setup(o => o.obtenerListaReproduccionPorUsuario(idUsuario));
 
             var controller = new BibliotecaController(mock.Object);
             var result = controller.AgregarListaDeReproduccion(listaReproduccion, idUsuario) as ViewResult;
 
             Assert.IsInstanceOf<ViewResult>(result);
-            mock.Verify(o => o.agregarListaReproduccion(listaReproduccion, idUsuario), Times.AtLeastOnce);
+            mock.Verify(o => o.verificarListaReproduccionRepetida(listaReproduccion, idUsuario), Times.AtLeastOnce);
+            mock.Verify(o => o.agregarIdUsuarioAListaReproduccion(listaReproduccion, idUsuario), Times.AtLeastOnce);
+            mock.Verify(o => o.obtenerListaReproduccionPorUsuario(idUsuario), Times.AtLeastOnce);
         }
 
         [Test]
@@ -63,13 +67,13 @@ namespace SpotiFake.TEST.ControllersTest
             var idCancion = 5;
 
             var mock = new Mock<IBibliotecaService>();
-            mock.Setup(o => o.obtenerListaReproduccionPorUsuario(idUsuario));
+            mock.Setup(o => o.obtenerListaReproduccionPorUsuarioIQueriable(idUsuario));
 
             var controller = new BibliotecaController(mock.Object);
             var result = controller.SeleccionarPlaylist(idCancion, idUsuario) as ViewResult;
 
             Assert.IsInstanceOf<ViewResult>(result);
-            mock.Verify(o => o.obtenerListaReproduccionPorUsuario(idUsuario), Times.AtLeastOnce);
+            mock.Verify(o => o.obtenerListaReproduccionPorUsuarioIQueriable(idUsuario), Times.AtLeastOnce);
         }
 
         [Test]
@@ -120,7 +124,7 @@ namespace SpotiFake.TEST.ControllersTest
         }
 
 
-        //Pruebas que deberían pasar
+        //Pruebas que no deberían pasar
 
         [Test]
         public void probarIndexObtenerListaReproduccionUsuarioNoPasa()
@@ -150,13 +154,17 @@ namespace SpotiFake.TEST.ControllersTest
             };
 
             var mock = new Mock<IBibliotecaService>();
-            mock.Setup(o => o.agregarListaReproduccion(listaReproduccion, idUsuario));
+            mock.Setup(o => o.verificarListaReproduccionRepetida(listaReproduccion, idUsuario));
+            mock.Setup(o => o.agregarIdUsuarioAListaReproduccion(listaReproduccion, idUsuario));
+            mock.Setup(o => o.obtenerListaReproduccionPorUsuario(idUsuario));
 
             var controller = new BibliotecaController(mock.Object);
             var result = controller.AgregarListaDeReproduccion(listaReproduccion, idUsuario) as ViewResult;
 
             Assert.IsNotInstanceOf<ViewResult>(result);
-            mock.Verify(o => o.agregarListaReproduccion(listaReproduccion, idUsuario), Times.Never);
+            mock.Verify(o => o.verificarListaReproduccionRepetida(listaReproduccion, idUsuario), Times.Never);
+            mock.Verify(o => o.agregarIdUsuarioAListaReproduccion(listaReproduccion, idUsuario), Times.Never);
+            mock.Verify(o => o.obtenerListaReproduccionPorUsuario(idUsuario), Times.Never);
         }
 
         [Test]

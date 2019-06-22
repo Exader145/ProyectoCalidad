@@ -1,4 +1,6 @@
 using SpotiFake.Interface;
+using SpotiFake.Interface.Managers;
+using SpotiFake.Managers;
 using SpotiFake.Services;
 using System;
 
@@ -49,6 +51,8 @@ namespace SpotiFake
             container.RegisterType<IBibliotecaService, BibliotecaService>();
             container.RegisterType<ICancionService, CancionService>();
             container.RegisterType<IUsuarioService, UsuarioService>();
+            container.RegisterType<ILoginService, LoginService>();
+            container.RegisterType<ISessionManager, SessionManager>();
         }
     }
 }

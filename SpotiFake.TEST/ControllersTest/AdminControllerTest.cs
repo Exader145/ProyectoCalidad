@@ -34,16 +34,14 @@ namespace SpotiFake.TEST.Controllers
         [Test]
         public void probarAgregarGuardaDatosAdministrador()
         {
-            //var usuario = new Usuario()
-            //{
-            //    nombre = "Juan Pérez",
-            //    correoElectronico = "juan_perez@hotmail.com",
-            //    rol = "Admin",
-            //    contraseña = "1234",
-            //    fechaCreación = DateTime.Now
-            //};
-
-            var usuario = new Usuario();
+            var usuario = new Usuario()
+            {
+                nombre = "Juan Pérez",
+                correoElectronico = "juan_perez@hotmail.com",
+                rol = "Admin",
+                contraseña = "1234",
+                fechaCreación = DateTime.Now
+            };
 
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.agregarAdministrador(usuario));
@@ -110,92 +108,85 @@ namespace SpotiFake.TEST.Controllers
 
 
         //Pruebas que no deberian pasar
-        
-//        [Test]
-//        public void probarIndexRetornaListaAdministradoresNoPasa()
-//        {
-//            var mock = new Mock<IAdministradorService>();
-//            mock.Setup(o => o.retornarListaAdministradores());
 
-//            var controller = new AdminController(mock.Object);
-//            var result = controller.Index() as ViewResult;
+        [Test]
+        public void probarIndexRetornaListaAdministradoresNoPasa()
+        {
+            var mock = new Mock<IAdministradorService>();
+            mock.Setup(o => o.retornarListaAdministradores());
 
-//            Assert.IsNotInstanceOf<ViewResult>(result);
-//            mock.Verify(o => o.retornarListaAdministradores(), Times.Never);
-//        }
+            var controller = new AdminController(mock.Object);
+            var result = controller.Index() as ViewResult;
 
-//        [Test]
-//        public void probarAgregarGuardaDatosAdministradorNoPasa()
-//        {
-//            var usuario = new Usuario()
-//            {
-//                nombre = "Juan Pérez",
-//                correoElectronico = "juan_perez@hotmail.com",
-//                rol = "Admin",
-//                contraseña = "1234",
-//                fechaCreación = DateTime.Now
-//            };
+            Assert.IsNotInstanceOf<ViewResult>(result);
+            mock.Verify(o => o.retornarListaAdministradores(), Times.Never);
+        }
 
-//            var mock = new Mock<IAdministradorService>();
-//            mock.Setup(o => o.agregarAdministrador(usuario));
+        [Test]
+        public void probarAgregarGuardaDatosAdministradorNoPasa()
+        {
+            var usuario = new Usuario();
 
-//            var controller = new AdminController(mock.Object);
-//            var result = controller.agregar(usuario) as RedirectToRouteResult;
+            var mock = new Mock<IAdministradorService>();
+            mock.Setup(o => o.agregarAdministrador(usuario));
 
-//            Assert.IsNotInstanceOf<RedirectToRouteResult>(result);
-//            mock.Verify(o => o.agregarAdministrador(usuario), Times.Never);
-//        }
+            var controller = new AdminController(mock.Object);
+            var result = controller.agregar(usuario) as RedirectToRouteResult;
 
-//        [Test]
-//        public void formularioModificarObtieneObjetoUsuarioNoPasa()
-//        {
-//            var idUsuario = 2;
+            Assert.IsNotInstanceOf<RedirectToRouteResult>(result);
+            mock.Verify(o => o.agregarAdministrador(usuario), Times.AtLeastOnce);
+        }
 
-//            var mock = new Mock<IAdministradorService>();
-//            mock.Setup(o => o.obtenerIdUsuarioParaModificar(idUsuario));
+        [Test]
+        public void formularioModificarObtieneObjetoUsuarioNoPasa()
+        {
+            var idUsuario = 2;
 
-//            var controller = new AdminController(mock.Object);
-//            var result = controller.FormularioModificar(idUsuario) as ViewResult;
+            var mock = new Mock<IAdministradorService>();
+            mock.Setup(o => o.obtenerIdUsuarioParaModificar(idUsuario));
 
-//            Assert.IsNotInstanceOf<ViewResult>(result);
-//            mock.Verify(o => o.obtenerIdUsuarioParaModificar(idUsuario), Times.Never);
-//        }
+            var controller = new AdminController(mock.Object);
+            var result = controller.FormularioModificar(idUsuario) as ViewResult;
 
-//        [Test]
-//        public void actualizarGuardarDatosModificadosNoPasa()
-//        {
-//            var usuario = new Usuario()
-//            {
-//                nombre = "Pedro Rodriguez",
-//                correoElectronico = "pedro_rodriguez@hotmail.com",
-//                rol = "Admin",
-//                contraseña = "123456",
-//                fechaCreación = DateTime.Now
-//            };
+            Assert.IsNotInstanceOf<ViewResult>(result);
+            mock.Verify(o => o.obtenerIdUsuarioParaModificar(idUsuario), Times.Never);
+        }
 
-//            var mock = new Mock<IAdministradorService>();
-//            mock.Setup(o => o.actualizarYGuardarDatosUsuario(usuario));
+        [Test]
+        public void actualizarGuardarDatosModificadosNoPasa()
+        {
+            var usuario = new Usuario()
+            {
+                nombre = "Pedro Rodriguez",
+                correoElectronico = "pedro_rodriguez@hotmail.com",
+                rol = "Admin",
+                contraseña = "123456",
+                fechaCreación = DateTime.Now
+            };
 
-//            var controller = new AdminController(mock.Object);
-//            var result = controller.Actualizar(usuario) as RedirectToRouteResult;
+            var mock = new Mock<IAdministradorService>();
+            mock.Setup(o => o.actualizarYGuardarDatosUsuario(usuario));
 
-//            Assert.IsNotInstanceOf<RedirectToRouteResult>(result);
-//            mock.Verify(o => o.actualizarYGuardarDatosUsuario(usuario), Times.Never);
-//        }
+            var controller = new AdminController(mock.Object);
+            var result = controller.Actualizar(usuario) as RedirectToRouteResult;
 
-//        [Test]
-//        public void eliminarEliminaUsuarioPorIdNoPasa()
-//        {
-//            int idUsuario = 2;
+            Assert.IsNotInstanceOf<RedirectToRouteResult>(result);
+            mock.Verify(o => o.actualizarYGuardarDatosUsuario(usuario), Times.Never);
+        }
 
-//            var mock = new Mock<IAdministradorService>();
-//            mock.Setup(o => o.eliminarUsuario(idUsuario));
+        [Test]
+        public void eliminarEliminaUsuarioPorIdNoPasa()
+        {
+            int idUsuario = 2;
 
-//            var controller = new AdminController(mock.Object);
-//            var result = controller.eliminar(idUsuario) as RedirectToRouteResult;
+            var mock = new Mock<IAdministradorService>();
+            mock.Setup(o => o.eliminarUsuario(idUsuario));
 
-//            Assert.IsNotInstanceOf<RedirectToRouteResult>(result);
-//            mock.Verify(o => o.eliminarUsuario(idUsuario), Times.Never);
-//        }
+            var controller = new AdminController(mock.Object);
+            var result = controller.eliminar(idUsuario) as RedirectToRouteResult;
+
+            Assert.IsNotInstanceOf<RedirectToRouteResult>(result);
+            mock.Verify(o => o.eliminarUsuario(idUsuario), Times.Never);
+        }
     }
 }

@@ -25,28 +25,25 @@ namespace SpotiFake.Services
             return listaReproduccionUsuario;
         }
 
-        public List<ListaReproduccion> agregarListaReproduccion(ListaReproduccion listaReproduccion, int idUsuario)
+        public ListaReproduccion verificarListaReproduccionRepetida(ListaReproduccion listaReproduccion, int idUsuario)
         {
-            var listReproducRepetida = context.ListaReproduccions.
-                Where(o => o.idUsuario == idUsuario && o.nombre == listaReproduccion.nombre).FirstOrDefault();
+            return context.ListaReproduccions.Where(o => o.idUsuario == idUsuario && o.nombre == listaReproduccion.nombre).
+                FirstOrDefault();
+        }
 
-            if (listReproducRepetida == null)
-            {
+        public void agregarIdUsuarioAListaReproduccion(ListaReproduccion listaReproduccion, int idUsuario)
+        {
                 listaReproduccion.idUsuario = idUsuario;
                 context.ListaReproduccions.Add(listaReproduccion);
                 context.SaveChanges();
-            }
-            else
-            {
-                //mostrar mensaje que la lista agregada ya existe
-            }
-
-            var ListaReproducciones = context.ListaReproduccions.Where(o => o.idUsuario == idUsuario).ToList();
-
-            return ListaReproducciones;
         }
 
-        public IQueryable<ListaReproduccion> obtenerListaReproduccionPorUsuario(int idUsuario)
+        public List<ListaReproduccion> obtenerListaReproduccionPorUsuario(int idUsuario)
+        {
+            return context.ListaReproduccions.Where(o => o.idUsuario == idUsuario).ToList();
+        }
+
+        public IQueryable<ListaReproduccion> obtenerListaReproduccionPorUsuarioIQueriable(int idUsuario)
         {
             var playlist = context.ListaReproduccions.Where(o => o.idUsuario == idUsuario);
             return playlist;
@@ -62,23 +59,20 @@ namespace SpotiFake.Services
             return ListaReproduciones;
         }
 
+        public ListaReproduccion_Cancion obtenerCancionRepetidaEnListaReproduccion_Cancion(int idCancion, int idListaReproduccion)
+        {
+            return context.listaReproduccion_Cancion.
+                Where(o => o.idCancion == idCancion &&
+                o.idListaReproduccion == idListaReproduccion).FirstOrDefault();
+        }
+
         public void agregarCancionAListaReproduccion(int idCancion, int idListaReproduccion)
         {
-            var cancionRepetida = context.listaReproduccion_Cancion.
-                Where(o => o.idCancion == idCancion && o.idListaReproduccion == idListaReproduccion).FirstOrDefault();
-
-            if (cancionRepetida == null)
-            {
                 var tabladetalle = new ListaReproduccion_Cancion();
                 tabladetalle.idListaReproduccion = idListaReproduccion;
                 tabladetalle.idCancion = idCancion;
                 context.listaReproduccion_Cancion.Add(tabladetalle);
                 context.SaveChanges();
-            }
-            else
-            {
-                //mostrar mensaje que la cancion ya se encuentra en la lista de reproduccion
-            }
         }
 
         public List<ListaReproduccion_Cancion> obtenerCancionesDeUnaListaReproduccion(int idListaReproduccion)

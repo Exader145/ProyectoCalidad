@@ -58,11 +58,11 @@ namespace SpotiFake.Controllers
         }
 
         [Authorize]
-        public ViewResult FormularioModificar(int id)
+        public ViewResult FormularioModificar(int idUsuario)
         {
             //Usuario admin = spotiFakeContext.Usuarios.Where(o => o.idUsuario == id).First();
 
-            var administrador = service.obtenerIdUsuarioParaModificar(id);
+            var administrador = service.obtenerIdUsuarioParaModificar(idUsuario);
 
             return View("FormularioModificar", administrador);
         }
@@ -76,8 +76,9 @@ namespace SpotiFake.Controllers
             //adminBD.contraseña = usuario.contraseña;
             //spotiFakeContext.SaveChanges();
 
-            service.actualizarYGuardarDatosUsuario(usuario);
+            var validation = new AdministradorValidation();
 
+            service.actualizarYGuardarDatosUsuario(usuario);
             return RedirectToAction("Index");
         }
 

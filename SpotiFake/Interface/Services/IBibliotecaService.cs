@@ -11,11 +11,17 @@ namespace SpotiFake.Interface
     {
         List<ListaReproduccion> obtenerListaReproduccionUsuario(int idUsuario);
 
-        List<ListaReproduccion> agregarListaReproduccion(ListaReproduccion listaReproduccion, int idUsuario);
+        ListaReproduccion verificarListaReproduccionRepetida(ListaReproduccion listaReproduccion, int idUsuario);
 
-        IQueryable<ListaReproduccion> obtenerListaReproduccionPorUsuario(int idUsuario);
+        void agregarIdUsuarioAListaReproduccion(ListaReproduccion listaReproduccion, int idUsuario);
+
+        List<ListaReproduccion> obtenerListaReproduccionPorUsuario(int idUsuario);
+
+        IQueryable<ListaReproduccion> obtenerListaReproduccionPorUsuarioIQueriable(int idUsuario);
 
         List<ListaReproduccion> eliminarListaReproduccionYMostrarNuevaLista(int idListaReproduccion, int idUsuario);
+
+        ListaReproduccion_Cancion obtenerCancionRepetidaEnListaReproduccion_Cancion(int idCancion, int idListaReproduccion);
 
         void agregarCancionAListaReproduccion(int idCancion, int idListaReproduccion);
 
