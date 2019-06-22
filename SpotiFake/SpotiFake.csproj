@@ -167,9 +167,9 @@
     <Compile Include="Interface\IAdministradorService.cs" />
     <Compile Include="Interface\ICancionService.cs" />
     <Compile Include="Interface\IUsuarioService.cs" />
-    <Compile Include="Migrations\201906210127112_InitDatabase.cs" />
-    <Compile Include="Migrations\201906210127112_InitDatabase.Designer.cs">
-      <DependentUpon>201906210127112_InitDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\201906221424004_asdm.cs" />
+    <Compile Include="Migrations\201906221424004_asdm.Designer.cs">
+      <DependentUpon>201906221424004_asdm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cancion.cs" />
@@ -277,8 +277,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906210127112_InitDatabase.resx">
-      <DependentUpon>201906210127112_InitDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906221424004_asdm.resx">
+      <DependentUpon>201906221424004_asdm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
