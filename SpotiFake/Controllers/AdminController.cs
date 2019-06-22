@@ -51,7 +51,7 @@ namespace SpotiFake.Controllers
             validation.Validate(usuario, ModelState);
 
             if (!ModelState.IsValid)
-                return RedirectToAction("FormularioAdmin");
+                return View("FormularioAdmin", new Usuario());
 
             service.agregarAdministrador(usuario);
             return RedirectToAction("Index");
