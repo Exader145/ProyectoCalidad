@@ -29,15 +29,15 @@
             <td>@cancion.genero</td>
             <td>
                 <form action="/Usuario/ReproducirCancion" method="post">
-                    <input name="idC" value="@cancion.idCancion" style="display:none" />
-                    <button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">REPRODUCIR</button>
+                    <input name="idCancion" value="@cancion.idCancion" style="display:none" />
+                    <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">REPRODUCIR</button>
                 </form>
             </td>
             <td>
                 <form action="/Biblioteca/SeleccionarPlaylist" method="post">
-                    <input name="idC" value="@cancion.idCancion" style="display:none" />
+                    <input name="idCancion" value="@cancion.idCancion" style="display:none" />
 
-                    <button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">AGREGAR A PLAYLIST</button>
+                    <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">AGREGAR A PLAYLIST</button>
                 </form>
             </td>
         </tr>

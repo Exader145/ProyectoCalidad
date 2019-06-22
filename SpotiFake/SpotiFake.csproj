@@ -166,6 +166,7 @@
     <Compile Include="Interface\IBibliotecaService.cs" />
     <Compile Include="Interface\IAdministradorService.cs" />
     <Compile Include="Interface\ICancionService.cs" />
+    <Compile Include="Interface\IUsuarioService.cs" />
     <Compile Include="Migrations\201906210127112_InitDatabase.cs" />
     <Compile Include="Migrations\201906210127112_InitDatabase.Designer.cs">
       <DependentUpon>201906210127112_InitDatabase.cs</DependentUpon>
@@ -181,6 +182,7 @@
     <Compile Include="Services\AdministradorService.cs" />
     <Compile Include="Services\BibliotecaService.cs" />
     <Compile Include="Services\CancionService.cs" />
+    <Compile Include="Services\UsuarioService.cs" />
     <Compile Include="Validation\ValidacionExistente.cs" />
   </ItemGroup>
   <ItemGroup>

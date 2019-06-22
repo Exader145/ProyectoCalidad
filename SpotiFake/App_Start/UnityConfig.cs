@@ -48,6 +48,7 @@ namespace SpotiFake
             container.RegisterType<IAdministradorService, AdministradorService>();
             container.RegisterType<IBibliotecaService, BibliotecaService>();
             container.RegisterType<ICancionService, CancionService>();
+            container.RegisterType<IUsuarioService, UsuarioService>();
         }
     }
 }

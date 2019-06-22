@@ -18,5 +18,7 @@ namespace SpotiFake.Interface
         void actualizarCancion(Cancion cancion);
 
         void eliminarCancion(int idCancion);
+
+        void logOff();
     }
 }

@@ -147,7 +147,10 @@ namespace SpotiFake.Controllers
 
         public ActionResult logOff()
         {
-            FormsAuthentication.SignOut();
+            //FormsAuthentication.SignOut();
+
+            service.logOff();
+
             return RedirectToAction("Index", "Login");
         }
     }

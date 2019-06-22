@@ -1,4 +1,5 @@
 ﻿using SpotiFake.DataBase;
+using SpotiFake.Interface;
 using SpotiFake.Models;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,13 @@ namespace SpotiFake.Controllers
     {
 
         SpotiFakeContext spotiFakeContext = new SpotiFakeContext();
+
+        private IUsuarioService service;
+
+        public UsuarioController(IUsuarioService service)
+        {
+            this.service = service;
+        }
 
         [Authorize]
         public ActionResult SysIndex()
@@ -39,7 +47,10 @@ namespace SpotiFake.Controllers
         [HttpPost]
         public ActionResult UsuarioIndex(int idUsuario)//metodo para navegar
         {
-            var cancion = spotiFakeContext.Cancions.ToList();
+            //var cancion = spotiFakeContext.Cancions.ToList();
+
+            var cancion = service.obtenerListaCancionesPorUsuario();
+
             return View(cancion);
         }
 
@@ -47,13 +58,19 @@ namespace SpotiFake.Controllers
         [HttpGet]
         public ActionResult UsuarioIndex()//metodo para ingresar
         {
-            var cancion = spotiFakeContext.Cancions.ToList();
+            //var cancion = spotiFakeContext.Cancions.ToList();
+
+            var cancion = service.obtenerListaCancionesPorUsuario();
+
             return View(cancion);
         }
 
         public ActionResult logOff()
         {
-            FormsAuthentication.SignOut();
+            //FormsAuthentication.SignOut();
+
+            service.logOff();
+
             return RedirectToAction("Index", "Login");
         }
 
@@ -77,16 +94,19 @@ namespace SpotiFake.Controllers
             return View("NuevoUsuario", new Usuario());
         }
         
-        public ActionResult ReproducirCancion(int idC,int idU)
+        public ActionResult ReproducirCancion(int idCancion,int idUsuario)
         {
             //instamcia
-            var cancionesEscuchadas = new CancionesEscuchadas();
-            cancionesEscuchadas.fecha = DateTime.Now;
-            cancionesEscuchadas.idUsuario = idU;
-            cancionesEscuchadas.idCancion = idC;
-            spotiFakeContext.CancionesEscuchadass.Add(cancionesEscuchadas);
-            spotiFakeContext.SaveChanges();
-            var cancion = spotiFakeContext.Cancions.ToList();
+            //var cancionesEscuchadas = new CancionesEscuchadas();
+            //cancionesEscuchadas.fecha = DateTime.Now;
+            //cancionesEscuchadas.idUsuario = idUsuario;
+            //cancionesEscuchadas.idCancion = idCancion;
+            //spotiFakeContext.CancionesEscuchadass.Add(cancionesEscuchadas);
+            //spotiFakeContext.SaveChanges();
+            //var cancion = spotiFakeContext.Cancions.ToList();
+
+            var cancion = service.agregarCancionACancionesEscuchadas(idCancion, idUsuario);
+
             return View("UsuarioIndex", cancion);
         }
         //public ActionResult AgregarPlaylist(int idCancion)
@@ -97,8 +117,11 @@ namespace SpotiFake.Controllers
         [Authorize]
         public ActionResult Historial(int idUsuario)
         {
-            var historial = spotiFakeContext.CancionesEscuchadass.Where(o=>o.idUsuario== idUsuario).Include(o=>o.cancion).ToList();
-            return View(historial);
+            //var historial = spotiFakeContext.CancionesEscuchadass.Where(o=>o.idUsuario== idUsuario).Include(o=>o.cancion).ToList();
+
+            var cancionesEscuchadas = service.obtenerListaCancionesEscuchadas(idUsuario);
+
+            return View(cancionesEscuchadas);
         }
     }
 }
