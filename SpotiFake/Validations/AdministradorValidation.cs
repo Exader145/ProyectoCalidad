@@ -19,7 +19,7 @@ namespace SpotiFake.Validations
                 modelState.AddModelError("Nombres", "El campo es obligatorio");
 
             if (string.IsNullOrEmpty(usuario.correoElectronico))
-                modelState.AddModelError("Correo electrónico", "El campo es obligatorio");
+                modelState.AddModelError("correoElectronico", "El campo es obligatorio");
 
             if (string.IsNullOrEmpty(usuario.contraseña))
                 modelState.AddModelError("Contraseña", "El campo es obligatorio");
