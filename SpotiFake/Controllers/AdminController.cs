@@ -1,6 +1,7 @@
 ﻿using SpotiFake.DataBase;
 using SpotiFake.Interface;
 using SpotiFake.Models;
+using SpotiFake.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,8 +46,14 @@ namespace SpotiFake.Controllers
             //usuario.fechaCreación = DateTime.Now;
             //spotiFakeContext.SaveChanges();
 
-            service.agregarAdministrador(usuario);
+            var validation = new AdministradorValidation();
 
+            validation.Validate(usuario, ModelState);
+
+            if (!ModelState.IsValid)
+                return View("FormularioAdmin", new Usuario());
+
+            service.agregarAdministrador(usuario);
             return RedirectToAction("Index");
         }
 
