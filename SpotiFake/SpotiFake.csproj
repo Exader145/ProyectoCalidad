@@ -183,6 +183,7 @@
     <Compile Include="Services\BibliotecaService.cs" />
     <Compile Include="Services\CancionService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
+    <Compile Include="Validations\AdministradorValidation.cs" />
     <Compile Include="Validation\ValidacionExistente.cs" />
   </ItemGroup>
   <ItemGroup>

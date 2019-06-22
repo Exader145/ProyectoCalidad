@@ -25,10 +25,10 @@ namespace SpotiFake.Services
 
         public void agregarAdministrador(Usuario usuario)
         {
-            context.Usuarios.Add(usuario);
-            usuario.rol = "Admin";
-            usuario.fechaCreación = DateTime.Now;
-            context.SaveChanges();
+                context.Usuarios.Add(usuario);
+                usuario.rol = "Admin";
+                usuario.fechaCreación = DateTime.Now;
+                context.SaveChanges();
         }
 
         public Usuario obtenerIdUsuarioParaModificar(int idUsuario)
