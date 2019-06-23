@@ -21,8 +21,7 @@ namespace SpotiFake.Services
 
         public List<Cancion> obtenerListaCanciones()
         {
-            var cancion = context.Cancions.ToList();
-            return cancion;
+            return context.Cancions.ToList();
         }
 
         public void guardarCancion(Cancion cancion)
@@ -34,9 +33,7 @@ namespace SpotiFake.Services
 
         public Cancion obtenerDatosCancionAModificar(int id)
         {
-            var cancion = context.Cancions.Where(o => o.idCancion == id).FirstOrDefault();
-
-            return cancion;
+            return context.Cancions.Where(o => o.idCancion == id).FirstOrDefault();
         }
 
         public void actualizarCancion(Cancion cancion)

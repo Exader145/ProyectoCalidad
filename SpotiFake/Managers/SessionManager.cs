@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.SessionState;
 
 namespace SpotiFake.Managers
@@ -21,6 +22,11 @@ namespace SpotiFake.Managers
         {
             session = HttpContext.Current.Session;
             session["IdUsuario"] = idUsuario;
+        }
+
+        public void AutenticacionCorreoElectronico(String correoElectronico, bool valor)
+        {
+            FormsAuthentication.SetAuthCookie(correoElectronico, valor);
         }
     }
 }

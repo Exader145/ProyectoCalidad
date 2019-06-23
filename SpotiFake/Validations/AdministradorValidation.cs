@@ -1,4 +1,5 @@
-﻿using SpotiFake.Models;
+﻿using SpotiFake.Interface.Validations;
+using SpotiFake.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Web.Mvc;
 
 namespace SpotiFake.Validations
 {
-    public class AdministradorValidation
+    public class AdministradorValidation : IAdministradorValidation
     {
         private ModelStateDictionary modelState;
 

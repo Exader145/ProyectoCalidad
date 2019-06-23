@@ -1,7 +1,9 @@
 using SpotiFake.Interface;
 using SpotiFake.Interface.Managers;
+using SpotiFake.Interface.Validations;
 using SpotiFake.Managers;
 using SpotiFake.Services;
+using SpotiFake.Validations;
 using System;
 
 using Unity;
@@ -53,6 +55,8 @@ namespace SpotiFake
             container.RegisterType<IUsuarioService, UsuarioService>();
             container.RegisterType<ILoginService, LoginService>();
             container.RegisterType<ISessionManager, SessionManager>();
+            container.RegisterType<IAdministradorValidation, AdministradorValidation>();
+            container.RegisterType<ICancionValidation, CancionValidation>();
         }
     }
 }

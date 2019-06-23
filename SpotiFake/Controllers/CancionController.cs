@@ -1,6 +1,8 @@
 ﻿using SpotiFake.DataBase;
 using SpotiFake.Interface;
+using SpotiFake.Interface.Validations;
 using SpotiFake.Models;
+using SpotiFake.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +18,16 @@ namespace SpotiFake.Controllers
         //SpotiFakeContext spotiFakeContext = new SpotiFakeContext();
 
         private ICancionService service;
+        private ICancionValidation validation;
 
-        public CancionController(ICancionService service)
+        public CancionController(ICancionService service, ICancionValidation validation)
         {
             this.service = service;
+            this.validation = validation;
+        }
+
+        public CancionController()
+        {
         }
         
         public ActionResult Index()
@@ -56,8 +64,12 @@ namespace SpotiFake.Controllers
             //cancion.fechaRegistro = DateTime.Now;
             //spotiFakeContext.SaveChanges();
 
-            service.guardarCancion(cancion);
+            validation.Validate(cancion, ModelState);
 
+            if (!validation.IsValid())
+                return View("FormularioCancion", new Cancion());
+
+            service.guardarCancion(cancion);
             return RedirectToAction("Index");
         }
 
@@ -67,8 +79,12 @@ namespace SpotiFake.Controllers
             //cancion.fechaRegistro = DateTime.Now;
             //spotiFakeContext.SaveChanges();
 
-            service.guardarCancion(cancion);
+            validation.Validate(cancion, ModelState);
 
+            if (!validation.IsValid())
+                return View("registrarCancionSys", new Cancion());
+
+            service.guardarCancion(cancion);
             return RedirectToAction("IndexSys");
         }
 
