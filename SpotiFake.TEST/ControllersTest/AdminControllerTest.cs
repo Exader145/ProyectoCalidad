@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using SpotiFake.Controllers;
 using SpotiFake.Interface;
+using SpotiFake.Interface.Validations;
 using SpotiFake.Models;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace SpotiFake.TEST.Controllers
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.retornarListaAdministradores());
 
-            var controller = new AdminController(mock.Object);
+            var controller = new AdminController(mock.Object, null);
             var result = controller.Index() as ViewResult;
 
             Assert.IsInstanceOf<ViewResult>(result);
@@ -43,14 +44,18 @@ namespace SpotiFake.TEST.Controllers
                 fechaCreación = DateTime.Now
             };
 
-            var mock = new Mock<IAdministradorService>();
-            mock.Setup(o => o.agregarAdministrador(usuario));
+            var mockValidation = new Mock<IAdministradorValidation>();
+            mockValidation.Setup(o => o.Validate(usuario, null));
+            //mockValidation.Setup(o => o.IsValid()).Returns(true);
 
-            var controller = new AdminController(mock.Object);
-            var result = controller.agregar(usuario);
+            var mockService = new Mock<IAdministradorService>();
+            mockService.Setup(o => o.agregarAdministrador(usuario));
+
+            var controller = new AdminController(mockService.Object, mockValidation.Object);
+            var result = controller.agregar(usuario) as RedirectToRouteResult;
 
             Assert.IsInstanceOf<RedirectToRouteResult>(result);
-            mock.Verify(o => o.agregarAdministrador(usuario), Times.AtMostOnce);
+            mockService.Verify(o => o.agregarAdministrador(usuario), Times.AtMostOnce);
         }
 
         [Test]
@@ -61,7 +66,7 @@ namespace SpotiFake.TEST.Controllers
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.obtenerIdUsuarioParaModificar(idUsuario));
 
-            var controller = new AdminController(mock.Object);
+            var controller = new AdminController(mock.Object, null);
             var result = controller.FormularioModificar(idUsuario) as ViewResult;
 
             Assert.IsInstanceOf<ViewResult>(result);
@@ -83,7 +88,7 @@ namespace SpotiFake.TEST.Controllers
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.actualizarYGuardarDatosUsuario(usuario));
 
-            var controller = new AdminController(mock.Object);
+            var controller = new AdminController(mock.Object, null);
             var result = controller.Actualizar(usuario) as RedirectToRouteResult;
 
             Assert.IsInstanceOf<RedirectToRouteResult>(result);
@@ -98,7 +103,7 @@ namespace SpotiFake.TEST.Controllers
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.eliminarUsuario(idUsuario));
 
-            var controller = new AdminController(mock.Object);
+            var controller = new AdminController(mock.Object, null);
             var result = controller.eliminar(idUsuario) as RedirectToRouteResult;
 
             Assert.IsInstanceOf<RedirectToRouteResult>(result);
@@ -115,7 +120,7 @@ namespace SpotiFake.TEST.Controllers
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.retornarListaAdministradores());
 
-            var controller = new AdminController(mock.Object);
+            var controller = new AdminController(mock.Object, null);
             var result = controller.Index() as ViewResult;
 
             Assert.IsNotInstanceOf<ViewResult>(result);
@@ -127,10 +132,13 @@ namespace SpotiFake.TEST.Controllers
         {
             var usuario = new Usuario();
 
+            var mockValidation = new Mock<IAdministradorValidation>();
+            mockValidation.Setup(o => o.Validate(usuario, null));
+
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.agregarAdministrador(usuario));
 
-            var controller = new AdminController(mock.Object);
+            var controller = new AdminController(mock.Object, mockValidation.Object);
             var result = controller.agregar(usuario) as RedirectToRouteResult;
 
             Assert.IsNotInstanceOf<RedirectToRouteResult>(result);
@@ -145,7 +153,7 @@ namespace SpotiFake.TEST.Controllers
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.obtenerIdUsuarioParaModificar(idUsuario));
 
-            var controller = new AdminController(mock.Object);
+            var controller = new AdminController(mock.Object, null);
             var result = controller.FormularioModificar(idUsuario) as ViewResult;
 
             Assert.IsNotInstanceOf<ViewResult>(result);
@@ -167,7 +175,7 @@ namespace SpotiFake.TEST.Controllers
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.actualizarYGuardarDatosUsuario(usuario));
 
-            var controller = new AdminController(mock.Object);
+            var controller = new AdminController(mock.Object, null);
             var result = controller.Actualizar(usuario) as RedirectToRouteResult;
 
             Assert.IsNotInstanceOf<RedirectToRouteResult>(result);
@@ -182,7 +190,7 @@ namespace SpotiFake.TEST.Controllers
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.eliminarUsuario(idUsuario));
 
-            var controller = new AdminController(mock.Object);
+            var controller = new AdminController(mock.Object, null);
             var result = controller.eliminar(idUsuario) as RedirectToRouteResult;
 
             Assert.IsNotInstanceOf<RedirectToRouteResult>(result);

@@ -169,6 +169,8 @@
     <Compile Include="Interface\Services\ICancionService.cs" />
     <Compile Include="Interface\Services\ILoginService.cs" />
     <Compile Include="Interface\Services\IUsuarioService.cs" />
+    <Compile Include="Interface\Validations\IAdministradorValidation.cs" />
+    <Compile Include="Interface\Validations\ICancionValidation.cs" />
     <Compile Include="Managers\SessionManager.cs" />
     <Compile Include="Migrations\201906221606084_InitDatabase.cs" />
     <Compile Include="Migrations\201906221606084_InitDatabase.Designer.cs">
@@ -188,6 +190,7 @@
     <Compile Include="Services\LoginService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
     <Compile Include="Validations\AdministradorValidation.cs" />
+    <Compile Include="Validations\CancionValidation.cs" />
     <Compile Include="Validation\ValidacionExistente.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using SpotiFake.DataBase;
 using SpotiFake.Interface;
+using SpotiFake.Interface.Validations;
 using SpotiFake.Models;
 using SpotiFake.Validations;
 using System;
@@ -16,10 +17,12 @@ namespace SpotiFake.Controllers
         //SpotiFakeContext spotiFakeContext = new SpotiFakeContext();
 
         private IAdministradorService service;
+        private IAdministradorValidation validation;
 
-        public AdminController(IAdministradorService service)
+        public AdminController(IAdministradorService service, IAdministradorValidation validation)
         {
             this.service = service;
+            this.validation = validation;
         }
 
         [Authorize]
@@ -45,8 +48,6 @@ namespace SpotiFake.Controllers
             //usuario.rol = "Admin";
             //usuario.fechaCreación = DateTime.Now;
             //spotiFakeContext.SaveChanges();
-
-            var validation = new AdministradorValidation();
 
             validation.Validate(usuario, ModelState);
 
@@ -75,8 +76,6 @@ namespace SpotiFake.Controllers
             //adminBD.correoElectronico = usuario.correoElectronico;
             //adminBD.contraseña = usuario.contraseña;
             //spotiFakeContext.SaveChanges();
-
-            var validation = new AdministradorValidation();
 
             service.actualizarYGuardarDatosUsuario(usuario);
             return RedirectToAction("Index");
