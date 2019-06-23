@@ -9,5 +9,7 @@ namespace SpotiFake.Interface.Managers
     {
         void SetNombreUsuario(String nombreUsuario);
         void SetIdUsuario(int idUsuario);
+
+        void AutenticacionCorreoElectronico(String correoElectronico, bool valor);
     }
 }

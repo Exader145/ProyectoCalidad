@@ -41,7 +41,7 @@ namespace SpotiFake.Controllers
 
             var usuarioRegistradoBD = service.obtenerUsuarioRegistrado(usuario);
 
-            if (usuarioRegistradoBD!=null)
+            if (usuarioRegistradoBD != null)
             {
                 ViewBag.AccesoConfirmado = usuarioRegistradoBD;
 
@@ -54,19 +54,28 @@ namespace SpotiFake.Controllers
 
                 if (usuarioRegistradoBD.rol == "Admin")
                 {
-                    FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
+                    //FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
+
+                    manager.AutenticacionCorreoElectronico(usuario.correoElectronico, false);
+
                     return RedirectToAction("AdminIndex", "Usuario");
                 }
 
                 if (usuarioRegistradoBD.rol == "Sys")
                 {
-                    FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
+                    //FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
+
+                    manager.AutenticacionCorreoElectronico(usuario.correoElectronico, false);
+
                     return RedirectToAction("SysIndex", "Usuario");
                 }
 
                 if (usuarioRegistradoBD.rol == "Usuario")
                 {
-                    FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
+                    //FormsAuthentication.SetAuthCookie(usuario.correoElectronico, false);
+
+                    manager.AutenticacionCorreoElectronico(usuario.correoElectronico, false);
+
                     return RedirectToAction("UsuarioIndex", "Usuario");
                 }
             }
