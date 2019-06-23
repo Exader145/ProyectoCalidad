@@ -9,7 +9,7 @@ namespace SpotiFake.Interface
 {
     public interface IUsuarioService
     {
-        List<Cancion> obtenerListaCancionesPorUsuario();
+        List<Cancion> obtenerListaCancionesRegistradas();
 
         void logOff();
 

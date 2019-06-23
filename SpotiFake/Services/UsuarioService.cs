@@ -20,7 +20,7 @@ namespace SpotiFake.Services
             context = new SpotiFakeContext();
         }
 
-        public List<Cancion> obtenerListaCancionesPorUsuario()
+        public List<Cancion> obtenerListaCancionesRegistradas()
         {
             var cancion = context.Cancions.ToList();
             return cancion;

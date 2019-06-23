@@ -18,6 +18,10 @@ namespace SpotiFake.Controllers
 
         private IUsuarioService service;
 
+        public UsuarioController()
+        {
+        }
+
         public UsuarioController(IUsuarioService service)
         {
             this.service = service;
@@ -49,7 +53,7 @@ namespace SpotiFake.Controllers
         {
             //var cancion = spotiFakeContext.Cancions.ToList();
 
-            var cancion = service.obtenerListaCancionesPorUsuario();
+            var cancion = service.obtenerListaCancionesRegistradas();
 
             return View(cancion);
         }
@@ -60,7 +64,7 @@ namespace SpotiFake.Controllers
         {
             //var cancion = spotiFakeContext.Cancions.ToList();
 
-            var cancion = service.obtenerListaCancionesPorUsuario();
+            var cancion = service.obtenerListaCancionesRegistradas();
 
             return View(cancion);
         }
