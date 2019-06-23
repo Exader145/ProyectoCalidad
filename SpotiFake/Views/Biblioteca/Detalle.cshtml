@@ -31,14 +31,14 @@
                 <td>@ListReproduc_Songs.cancion.genero</td>
                 <td>
                     <form action="/Usuario/ReproducirCancion" method="post">
-                        <input name="idC" value="@ListReproduc_Songs.cancion.idCancion" style="display:none" />
-                        <button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">reproducir</button>
+                        <input name="idCancion" value="@ListReproduc_Songs.cancion.idCancion" style="display:none" />
+                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">reproducir</button>
                     </form>
                 </td>
                 <td>
                     <form action="">
-                        <input name="idC" value="@ListReproduc_Songs.cancion.idCancion" style="display:none" />
-                        <button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">eliminar</button>
+                        <input name="idCancion" value="@ListReproduc_Songs.cancion.idCancion" style="display:none" />
+                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">eliminar</button>
                     </form>
                 </td>
             </tr>

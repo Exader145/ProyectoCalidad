@@ -13,9 +13,9 @@ namespace SpotiFake.Controllers
     {
         SpotiFakeContext spotiFakeContext = new SpotiFakeContext();
 
-        public ActionResult Index()
+        public ActionResult Index(int idUsuario)
         {
-            var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario").ToList();
+            var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario"&&o.idUsuario!=idUsuario).ToList();
             return View(usuario);
         }
 
@@ -34,7 +34,7 @@ namespace SpotiFake.Controllers
             spotiFakeContext.DetalleUsuarios.Add(detalleUsuario);
             spotiFakeContext.SaveChanges();
 
-            var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario").ToList();
+            var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario"&&o.idUsuario!=idUsuario).ToList();
             return View("Index", usuario);
         }
 
