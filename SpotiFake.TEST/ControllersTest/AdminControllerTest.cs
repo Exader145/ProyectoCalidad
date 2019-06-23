@@ -44,9 +44,11 @@ namespace SpotiFake.TEST.Controllers
                 fechaCreación = DateTime.Now
             };
 
+            var modelState = new ModelStateDictionary();
+
             var mockValidation = new Mock<IAdministradorValidation>();
-            mockValidation.Setup(o => o.Validate(usuario, null));
-            //mockValidation.Setup(o => o.IsValid()).Returns(true);
+            mockValidation.Setup(o => o.Validate(usuario, modelState));
+            mockValidation.Setup(o => o.IsValid()).Returns(true);
 
             var mockService = new Mock<IAdministradorService>();
             mockService.Setup(o => o.agregarAdministrador(usuario));
@@ -55,6 +57,8 @@ namespace SpotiFake.TEST.Controllers
             var result = controller.agregar(usuario) as RedirectToRouteResult;
 
             Assert.IsInstanceOf<RedirectToRouteResult>(result);
+            mockValidation.Verify(o => o.Validate(usuario, modelState), Times.AtLeastOnce);
+            mockValidation.Verify(o => o.IsValid(), Times.AtLeastOnce);
             mockService.Verify(o => o.agregarAdministrador(usuario), Times.AtMostOnce);
         }
 
@@ -131,9 +135,11 @@ namespace SpotiFake.TEST.Controllers
         public void probarAgregarGuardaDatosAdministradorNoPasa()
         {
             var usuario = new Usuario();
+            var modelState = new ModelStateDictionary();
 
             var mockValidation = new Mock<IAdministradorValidation>();
-            mockValidation.Setup(o => o.Validate(usuario, null));
+            mockValidation.Setup(o => o.Validate(usuario, modelState));
+            mockValidation.Setup(o => o.IsValid()).Returns(false);
 
             var mock = new Mock<IAdministradorService>();
             mock.Setup(o => o.agregarAdministrador(usuario));
@@ -142,6 +148,8 @@ namespace SpotiFake.TEST.Controllers
             var result = controller.agregar(usuario) as RedirectToRouteResult;
 
             Assert.IsNotInstanceOf<RedirectToRouteResult>(result);
+            mockValidation.Verify(o => o.Validate(usuario, modelState));
+            mockValidation.Verify(o => o.IsValid());
             mock.Verify(o => o.agregarAdministrador(usuario), Times.AtLeastOnce);
         }
 

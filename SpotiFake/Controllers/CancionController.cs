@@ -66,7 +66,7 @@ namespace SpotiFake.Controllers
 
             validation.Validate(cancion, ModelState);
 
-            if (!ModelState.IsValid)
+            if (!validation.IsValid())
                 return View("FormularioCancion", new Cancion());
 
             service.guardarCancion(cancion);
@@ -81,7 +81,7 @@ namespace SpotiFake.Controllers
 
             validation.Validate(cancion, ModelState);
 
-            if (!ModelState.IsValid)
+            if (!validation.IsValid())
                 return View("registrarCancionSys", new Cancion());
 
             service.guardarCancion(cancion);
