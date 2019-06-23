@@ -59,5 +59,8 @@ namespace SpotiFake.TEST.ControllersTest
             Assert.IsInstanceOf<ViewResult>(result);
             mock.Verify(o => o.obtenerListaCancionesRegistradas(), Times.AtLeastOnce);
         }
+
+        [Test]
+        public void 
     }
 }
