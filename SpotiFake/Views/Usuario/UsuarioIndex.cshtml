@@ -30,13 +30,14 @@
             <td>
                 <form action="/Usuario/ReproducirCancion" method="post">
                     <input name="idCancion" value="@cancion.idCancion" style="display:none" />
+                    <input name="viewName" value="@ViewBag.viewName" style="display:none" />
                     <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">REPRODUCIR</button>
                 </form>
             </td>
             <td>
                 <form action="/Biblioteca/SeleccionarPlaylist" method="post">
                     <input name="idCancion" value="@cancion.idCancion" style="display:none" />
-
+                    
                     <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">AGREGAR A PLAYLIST</button>
                 </form>
             </td>

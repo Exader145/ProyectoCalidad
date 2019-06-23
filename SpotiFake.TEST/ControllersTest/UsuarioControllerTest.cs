@@ -28,19 +28,9 @@ namespace SpotiFake.TEST.ControllersTest
         [Test]
         public void probarAdminIndexRetornaSaludo()
         {
-            var usuario = new Usuario()
-            {
-                idUsuario = 2,
-                nombre = "Daniel Perez",
-                correoElectronico = "daniel@hotmail.com",
-                rol = "Usuario",
-                contraseña = "1234",
-                fechaCreación = DateTime.Now
-            };
-
             var controller = new UsuarioController();
 
-            var result = controller.AdminIndex(usuario) as ViewResult;
+            var result = controller.AdminIndex() as ViewResult;
 
             Assert.IsNotNull(result);
         }
@@ -60,7 +50,5 @@ namespace SpotiFake.TEST.ControllersTest
             mock.Verify(o => o.obtenerListaCancionesRegistradas(), Times.AtLeastOnce);
         }
 
-        [Test]
-        public void 
-    }
+            }
 }

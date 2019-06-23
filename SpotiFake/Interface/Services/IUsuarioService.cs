@@ -13,7 +13,7 @@ namespace SpotiFake.Interface
 
         void logOff();
 
-        List<Cancion> agregarCancionACancionesEscuchadas(int idCancion, int idUsuario);
+        void agregarCancionACancionesEscuchadas(int idCancion, int idUsuario);
 
         List<CancionesEscuchadas> obtenerListaCancionesEscuchadas(int idUsuario);
     }

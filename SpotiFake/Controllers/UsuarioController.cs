@@ -34,37 +34,20 @@ namespace SpotiFake.Controllers
         }
 
         [Authorize]
-        [HttpPost]
-        public ActionResult AdminIndex(Usuario usuario)
-        {
-            return View();
-        }
-
-        [Authorize]
-        [HttpGet]
         public ActionResult AdminIndex()
         {
             return View();
         }
 
         [Authorize]
-        [HttpPost]
-        public ActionResult UsuarioIndex(int idUsuario)//metodo para navegar
-        {
-            //var cancion = spotiFakeContext.Cancions.ToList();
-
-            var cancion = service.obtenerListaCancionesRegistradas();
-
-            return View(cancion);
-        }
-
-        [Authorize]
-        [HttpGet]
         public ActionResult UsuarioIndex()//metodo para ingresar
         {
             //var cancion = spotiFakeContext.Cancions.ToList();
 
+
             var cancion = service.obtenerListaCancionesRegistradas();
+
+            ViewBag.viewName = "UsuarioIndex";
 
             return View(cancion);
         }
@@ -98,33 +81,25 @@ namespace SpotiFake.Controllers
             return View("NuevoUsuario", new Usuario());
         }
         
-        public ActionResult ReproducirCancion(int idCancion,int idUsuario)
+        public ActionResult ReproducirCancion(int idCancion,int idUsuario, string viewName)
         {
-            //instamcia
-            //var cancionesEscuchadas = new CancionesEscuchadas();
-            //cancionesEscuchadas.fecha = DateTime.Now;
-            //cancionesEscuchadas.idUsuario = idUsuario;
-            //cancionesEscuchadas.idCancion = idCancion;
-            //spotiFakeContext.CancionesEscuchadass.Add(cancionesEscuchadas);
-            //spotiFakeContext.SaveChanges();
-            //var cancion = spotiFakeContext.Cancions.ToList();
+            //AGREGAR UN PARAMETRO STRING QUE CONTENGA EL NOMBRE DE LA VISTA
 
-            var cancion = service.agregarCancionACancionesEscuchadas(idCancion, idUsuario);
+            service.agregarCancionACancionesEscuchadas(idCancion, idUsuario);
 
-            return View("UsuarioIndex", cancion);
+            if (viewName == "Historial")
+            {
+                return View("Historial", service.obtenerListaCancionesEscuchadas(idUsuario));
+            }
+
+            return View("UsuarioIndex", service.obtenerListaCancionesRegistradas());
         }
-        //public ActionResult AgregarPlaylist(int idCancion)
-        //{
-        //    var cancion = spotiFakeContext.Cancions.ToList();
-        //    return View("UsuarioIndex", cancion);
-        //}
         [Authorize]
         public ActionResult Historial(int idUsuario)
         {
             //var historial = spotiFakeContext.CancionesEscuchadass.Where(o=>o.idUsuario== idUsuario).Include(o=>o.cancion).ToList();
-
+            ViewBag.viewName = "Historial";
             var cancionesEscuchadas = service.obtenerListaCancionesEscuchadas(idUsuario);
-
             return View(cancionesEscuchadas);
         }
     }
