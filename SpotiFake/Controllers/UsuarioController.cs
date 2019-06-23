@@ -18,6 +18,10 @@ namespace SpotiFake.Controllers
 
         private IUsuarioService service;
 
+        public UsuarioController()
+        {
+        }
+
         public UsuarioController(IUsuarioService service)
         {
             this.service = service;
@@ -40,8 +44,11 @@ namespace SpotiFake.Controllers
         {
             //var cancion = spotiFakeContext.Cancions.ToList();
 
-            var cancion = service.obtenerListaCanciones();
+
+            var cancion = service.obtenerListaCancionesRegistradas();
+
             ViewBag.viewName = "UsuarioIndex";
+
             return View(cancion);
         }
 
@@ -79,11 +86,13 @@ namespace SpotiFake.Controllers
             //AGREGAR UN PARAMETRO STRING QUE CONTENGA EL NOMBRE DE LA VISTA
 
             service.agregarCancionACancionesEscuchadas(idCancion, idUsuario);
+
             if (viewName == "Historial")
             {
                 return View("Historial", service.obtenerListaCancionesEscuchadas(idUsuario));
             }
-            return View("UsuarioIndex", service.obtenerListaCanciones());
+
+            return View("UsuarioIndex", service.obtenerListaCancionesRegistradas());
         }
         [Authorize]
         public ActionResult Historial(int idUsuario)
