@@ -1,9 +1,10 @@
 ﻿
 @{
     Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
+    
 }
 
-<h2>Historial</h2>
+<h2>Canciones Recientes</h2>
 
 <br />
 <table class="table">
@@ -17,7 +18,7 @@
     </thead>
     <tbody>
         @foreach (var cancion in Model)
-         {
+        {
             <tr>
                 <td>
                     <img src="~/Images/@cancion.cancion.imagen"
@@ -28,9 +29,10 @@
                 <td>@cancion.cancion.artista</td>
                 <td>@cancion.cancion.genero</td>
                 <td>
-                    <form action="/Usuario/Reproducir" method="post">
-                        <input name="id" value="@cancion.cancion.idCancion" style="display:none" />
-                        <button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">REPRODUCIR</button>
+                    <form action="/Usuario/ReproducirCancion" method="post">
+                        <input name="idCancion" value="@cancion.cancion.idCancion" style="display:none" />
+                        <input name="viewName" value="@ViewBag.viewName" style="display:none" />
+                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">REPRODUCIR</button>
                     </form>
 
                 </td>
@@ -43,6 +45,6 @@
                     </form>
                 </td>
             </tr>
-         }
+        }
     </tbody>
 </table>

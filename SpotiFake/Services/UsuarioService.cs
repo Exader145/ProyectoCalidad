@@ -20,7 +20,7 @@ namespace SpotiFake.Services
             context = new SpotiFakeContext();
         }
 
-        public List<Cancion> obtenerListaCancionesPorUsuario()
+        public List<Cancion> obtenerListaCanciones()
         {
             var cancion = context.Cancions.ToList();
             return cancion;
@@ -31,22 +31,29 @@ namespace SpotiFake.Services
             FormsAuthentication.SignOut();
         }
 
-        public List<Cancion> agregarCancionACancionesEscuchadas(int idCancion, int idUsuario)
+        public void agregarCancionACancionesEscuchadas(int idCancion, int idUsuario)
         {
-            var cancionesEscuchadas = new CancionesEscuchadas();
-            cancionesEscuchadas.fecha = DateTime.Now;
-            cancionesEscuchadas.idUsuario = idUsuario;
-            cancionesEscuchadas.idCancion = idCancion;
-            context.CancionesEscuchadass.Add(cancionesEscuchadas);
-            context.SaveChanges();
-            var cancion = context.Cancions.ToList();
-
-            return cancion;
+            var cancionExisteEnBD = context.CancionesEscuchadass.Where(o => o.idUsuario == idUsuario && o.idCancion == idCancion).FirstOrDefault();
+            var cancionEscuchada = new CancionesEscuchadas();
+            cancionEscuchada.fecha = DateTime.Now;
+            cancionEscuchada.idUsuario = idUsuario;
+            cancionEscuchada.idCancion = idCancion;
+            if (cancionExisteEnBD==null)
+            {
+                context.CancionesEscuchadass.Add(cancionEscuchada);
+                context.SaveChanges();
+            }
+            else
+            {
+                context.CancionesEscuchadass.Remove(cancionExisteEnBD);
+                context.CancionesEscuchadass.Add(cancionEscuchada);
+                context.SaveChanges();
+            }
         }
 
         public List<CancionesEscuchadas> obtenerListaCancionesEscuchadas(int idUsuario)
         {
-            var cancionesEscuchadas = context.CancionesEscuchadass.Where(o => o.idUsuario == idUsuario).Include(o => o.cancion).ToList();
+            var cancionesEscuchadas = context.CancionesEscuchadass.Where(o => o.idUsuario == idUsuario).OrderByDescending(o=>o.fecha).Include(o => o.cancion).ToList();
 
             return cancionesEscuchadas;
         }
