@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 using SpotiFake.Controllers;
+using SpotiFake.Interface;
 using SpotiFake.Models;
 using System;
 using System.Collections.Generic;
@@ -44,9 +46,18 @@ namespace SpotiFake.TEST.ControllersTest
         }
 
         [Test]
-        public void probarUsuarioIndexRetornaListaCancionesPorUsuario()
+        public void probarUsuarioIndexRetornaListaCancionesRegistradas()
         {
-            
+            var idUsuario = 2;
+
+            var mock = new Mock<IUsuarioService>();
+            mock.Setup(o => o.obtenerListaCancionesRegistradas());
+
+            var controller = new UsuarioController(mock.Object);
+            var result = controller.UsuarioIndex(idUsuario) as ViewResult;
+
+            Assert.IsInstanceOf<ViewResult>(result);
+            mock.Verify(o => o.obtenerListaCancionesRegistradas(), Times.AtLeastOnce);
         }
     }
 }
