@@ -30,14 +30,6 @@ namespace SpotiFake.Controllers
         }
 
         [Authorize]
-        [HttpPost]
-        public ActionResult AdminIndex(Usuario usuario)
-        {
-            return View();
-        }
-
-        [Authorize]
-        [HttpGet]
         public ActionResult AdminIndex()
         {
             return View();
