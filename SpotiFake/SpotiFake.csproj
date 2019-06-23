@@ -172,9 +172,9 @@
     <Compile Include="Interface\Validations\IAdministradorValidation.cs" />
     <Compile Include="Interface\Validations\ICancionValidation.cs" />
     <Compile Include="Managers\SessionManager.cs" />
-    <Compile Include="Migrations\201906221606084_InitDatabase.cs" />
-    <Compile Include="Migrations\201906221606084_InitDatabase.Designer.cs">
-      <DependentUpon>201906221606084_InitDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\201906230006199_asljkdn.cs" />
+    <Compile Include="Migrations\201906230006199_asljkdn.Designer.cs">
+      <DependentUpon>201906230006199_asljkdn.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cancion.cs" />
@@ -285,8 +285,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906221606084_InitDatabase.resx">
-      <DependentUpon>201906221606084_InitDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906230006199_asljkdn.resx">
+      <DependentUpon>201906230006199_asljkdn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

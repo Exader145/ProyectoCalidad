@@ -21,18 +21,23 @@ namespace SpotiFake.Controllers
 
         public ActionResult AgregarAmigo(int idUsuario, int idContacto)
         {
-            var detalleUsuario = new DetalleUsuario();
-            detalleUsuario.idUsuario = idUsuario;
-            detalleUsuario.idContacto = idContacto;
+            var amigoExisteBD = spotiFakeContext.DetalleUsuarios.Where(o=>o.idUsuario==idUsuario&&o.idContacto==idContacto).FirstOrDefault();
+            if (amigoExisteBD==null)
+            {
+                var detalleUsuario = new DetalleUsuario();
+                detalleUsuario.idUsuario = idUsuario;
+                detalleUsuario.idContacto = idContacto;
 
-            spotiFakeContext.DetalleUsuarios.Add(detalleUsuario);
-            spotiFakeContext.SaveChanges();
+                spotiFakeContext.DetalleUsuarios.Add(detalleUsuario);
+                spotiFakeContext.SaveChanges();
 
-            detalleUsuario.idUsuario = idContacto;
-            detalleUsuario.idContacto = idUsuario;
+                detalleUsuario.idUsuario = idContacto;
+                detalleUsuario.idContacto = idUsuario;
 
-            spotiFakeContext.DetalleUsuarios.Add(detalleUsuario);
-            spotiFakeContext.SaveChanges();
+                spotiFakeContext.DetalleUsuarios.Add(detalleUsuario);
+                spotiFakeContext.SaveChanges();
+            }
+            
 
             var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario"&&o.idUsuario!=idUsuario).ToList();
             return View("Index", usuario);
