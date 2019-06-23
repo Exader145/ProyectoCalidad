@@ -98,7 +98,7 @@ namespace SpotiFake.Controllers
         public ActionResult Historial(int idUsuario)
         {
             //var historial = spotiFakeContext.CancionesEscuchadass.Where(o=>o.idUsuario== idUsuario).Include(o=>o.cancion).ToList();
-            ViewBag.viewName = "Historial";
+            Session["viewName"] = "Historial";
             var cancionesEscuchadas = service.obtenerListaCancionesEscuchadas(idUsuario);
             return View(cancionesEscuchadas);
         }
