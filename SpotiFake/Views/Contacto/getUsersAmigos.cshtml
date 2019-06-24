@@ -1,0 +1,18 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+@foreach (var detalleusuario in Model)
+{
+    <tr id="user">
+        <td>@detalleusuario.usuario.nombre</td>
+        <td>
+            
+                <input name="idContacto" value="@detalleusuario.idContacto" style="display:none" />
+                <button id="btnEliminarAmigo" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">dejar de seguir </button>
+            
+        </td>
+    </tr>
+}

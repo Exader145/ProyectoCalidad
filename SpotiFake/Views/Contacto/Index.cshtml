@@ -6,8 +6,9 @@
 }
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
 <br />
-    <button id="btnlistDesconocidos" type="button" class="btn btn-info">Lista de amigos</button>
-    <button id="btnlistAmigos" type="button" class="btn btn-info">Encontrar amigos</button>
+    
+    <button id="btnlistAmigos" type="button" class="btn btn-info">Lista de amigos</button>
+    <button  id="btnlistDesconocidos" type="button" class="btn btn-info">Encontrar amigos</button>
     <div class="nav navbar-nav navbar-right">
         <input id="buscador" class="form-control" placeholder="Buscar"/>
     </div>
@@ -22,13 +23,14 @@
         
     </tbody>
 </table>
+<br/>
 <script>
     const amigos = document.querySelector('#btnlistAmigos');
-    const desconocidos = document.querySelector('#btnDesconocidos');
+    const desconocidos = document.querySelector('#btnlistDesconocidos');
     const buscador = document.querySelector('#buscador');
     var listUsurios = {};
 
-    const listAmigos = () => {
+    const listDesconocidos = () => {
         var request = jQuery.ajax({
             url: '/Contacto/getUsers?idUsuario=' +@Session["IdUsuario"],
             type: 'get'
@@ -37,15 +39,37 @@
             jQuery('#users').html(respuesta);
         });
     }
-    
+    const listAmigos = () => {
+        var request = jQuery.ajax({
+            url: '/Contacto/getUsersAmigos?idUsuario=' +@Session["IdUsuario"],
+            type: 'get'
+        });
+        request.done(function (respuesta) {
+            jQuery('#users').html(respuesta);
+        });
+        
+
+    };
+   
+
+    const setListAmigos = () => {
+        var request = jQuery.ajax({
+            url: '/Contacto/dejarAmigo?idUsuario=' +@Session["IdUsuario"],
+            type: 'get'
+        });
+        request.done(function(respuesta){
+            jQuery('#users').html(respuesta);
+        });
+    }
     const getlistUsers = () => {
         var filas = document.querySelectorAll("#user");
 
         console.log(filas);
         
     }
-
+    
     amigos.addEventListener('click', listAmigos)
+    desconocidos.addEventListener('click', listDesconocidos)
     
     
 </script>
