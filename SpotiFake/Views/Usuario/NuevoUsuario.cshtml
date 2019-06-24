@@ -13,26 +13,20 @@
 
             <div class="form-group">
                 <label>Nombre</label>
-                <input class="form-control" name="nombre" value="@Model.nombre" required />
+                <input id="txtNombre" class="form-control" name="nombre" value="@Model.nombre" required />
             </div>
 
             <div class="form-group">
                 <label>Correo Electronico</label>
-                <input class="form-control" name="correoElectronico" value="@Model.correoElectronico" required />
+                <input id="txtCorreo" class="form-control" name="correoElectronico" value="@Model.correoElectronico" type="email" required />
             </div>
+
             <div class="form-group">
                 <label>contraseña</label>
-                <input class="form-control" type="password" name="contraseña" value="@Model.contraseña" required/>
+                <input id="txtPassword" class="form-control" type="password" name="contraseña" value="@Model.contraseña" required/>
             </div>
-            @*<div class="form-group">
 
-                <input type="radio" name="sexo" id="Hombre" value="@Model.sexo Hombre" />
-                <label for="Hombre">Hombre</label>
-
-                <input type="radio" name="sexo" id="Mujer" value="@Model.sexo Mujer" />
-                <label for="Mujer">Mujer</label>
-            </div>*@
-            <button class="btn-danger">Guardar</button>
+            <button id="btnRegistrarUsuario" class="btn-danger">Guardar</button>
 
         </form>
     </div>

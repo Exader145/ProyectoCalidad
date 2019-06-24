@@ -4,7 +4,7 @@
  }
 <br />
 <form action="/Admin/FormularioAdmin" method="post">
-    <button class="btn-danger">Registrar Administrador</button>
+    <button id="btnRegistrarAdministrador" class="btn-danger">Registrar Administrador</button>
 </form>
 <br />
 <table class="table">
@@ -24,8 +24,8 @@
                 <td>@Admin.correoElectronico</td>
                 <td>@Admin.fechaCreación</td>
                 <td>
-                    <a href="/Admin/FormularioModificar?idUsuario=@Admin.idUsuario">EDITAR</a>|
-                    <a href="/Admin/eliminar?idUsuario=@Admin.idUsuario">ELIMINAR</a>
+                    <a id="btnEditar" href="/Admin/FormularioModificar?idUsuario=@Admin.idUsuario">EDITAR</a>|
+                    <a id="btnEliminar" href="/Admin/eliminar?idUsuario=@Admin.idUsuario">ELIMINAR</a>
                 </td>
             </tr>
         }

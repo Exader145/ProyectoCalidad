@@ -40,7 +40,7 @@
             <td>
                 <form action="/Biblioteca/SeleccionarPlaylist" method="post">
                     <input name="idCancion" value="@cancion.idCancion" style="display:none" />
-                    <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">AGREGAR A PLAYLIST</button>
+                    <button id="btnAgregarAPlaylist" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">AGREGAR A PLAYLIST</button>
                 </form>
             </td>
         </tr>
@@ -50,6 +50,12 @@
 </table>
 
 <tr>
+    <td>
+        <form action="/Usuario/UsuarioIndex" method="post">
+            <input type="hidden" />
+            <button id="btnInicioUsuario" class="btn btn-link"></button>
+        </form>
+    </td>
     <td>
         <form action="/Biblioteca/Index" method="post">
             <input type="hidden" />

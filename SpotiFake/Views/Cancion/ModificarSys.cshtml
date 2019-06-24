@@ -12,36 +12,36 @@
 
             <div class="form-group">
                 <label>Nombre de canción</label>
-                <input class="form-control" name="nombre" value="@Model.nombre" required />
+                <input id="txtNombre" class="form-control" name="nombre" value="@Model.nombre" required />
                 @Html.ValidationMessage("nombre", new { style = "color: Red" })
             </div>
 
             <div class="form-group">
                 <label>Nombre de artista</label>
-                <input class="form-control" name="artista" value="@Model.artista" required />
+                <input id="txtArtista" class="form-control" name="artista" value="@Model.artista" required />
             </div>
             <div class="form-group">
                 <label>Nombre de álbum</label>
-                <input class="form-control" name="album" value="@Model.album" required />
+                <input id="txtAlbum" class="form-control" name="album" value="@Model.album" required />
             </div>
             <div class="form-group">
                 <label>Género</label>
-                <input class="form-control" name="genero" value="@Model.genero" required />
+                <input id="txtGenero" class="form-control" name="genero" value="@Model.genero" required />
             </div>
             <div class="form-group">
                 <label>Duración de canción</label>
-                <input class="form-control" name="duracionCancion" value="@Model.duracionCancion" required />
+                <input id="txtDuracion" class="form-control" name="duracionCancion" value="@Model.duracionCancion" required />
             </div>
             <div class="form-group">
                 <label>Fecha de lanzamiento</label>
-                <input class="form-control" name="fechaLanzamiento" value="@Model.fechaLanzamiento" required />
+                <input id="txtFechaLanzamiento" class="form-control" name="fechaLanzamiento" value="@Model.fechaLanzamiento" required />
             </div>
             <div class="form-group">
                 <label>Nombre de imagen</label>
-                <input class="form-control" name="imagen" value="@Model.imagen" />
+                <input id="txtImagen" class="form-control" name="imagen" value="@Model.imagen" />
             </div>
 
-            <button class="btn-danger">Actualizar</button>
+            <button id="btnActualizar" class="btn-danger">Actualizar</button>
 
         </form>
     </div>

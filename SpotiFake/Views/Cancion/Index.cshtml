@@ -5,7 +5,7 @@
 
 <br />
 <form action="/Cancion/registrarCancion" method="post">
-    <button class="btn-danger">Registrar canción</button>
+    <button id="btnRegistrarCancion" class="btn-danger">Registrar canción</button>
 </form>
 <br />
 <table class="table">
@@ -36,8 +36,8 @@
                 <td>@cancion.duracionCancion</td>
                 <td>@cancion.fechaLanzamiento</td>
                 <td>
-                    <a href="/Cancion/modificar?id=@cancion.idCancion">EDITAR</a>|
-                    <a href="/Cancion/eliminar?id=@cancion.idCancion">ELIMINAR</a>
+                    <a id="btnEditar" href="/Cancion/modificar?id=@cancion.idCancion">EDITAR</a>|
+                    <a id="btnEliminar" href="/Cancion/eliminar?id=@cancion.idCancion">ELIMINAR</a>
                 </td>
             </tr>
         }
