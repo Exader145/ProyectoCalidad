@@ -3,6 +3,9 @@
     ViewBag.Title ="Inicio";
 }
 <h1 id="saludoAlUsuario">Bienvenido @Session["NombreUsuario"]</h1>
+<div class="nav navbar-nav navbar-right">
+    <input class="form-control" placeholder="Buscar"/>
+</div>
 <br />
 <table class="table">
     <thead>
@@ -37,7 +40,6 @@
             <td>
                 <form action="/Biblioteca/SeleccionarPlaylist" method="post">
                     <input name="idCancion" value="@cancion.idCancion" style="display:none" />
-                    
                     <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">AGREGAR A PLAYLIST</button>
                 </form>
             </td>
