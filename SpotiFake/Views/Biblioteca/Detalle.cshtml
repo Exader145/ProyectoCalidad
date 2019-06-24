@@ -38,6 +38,7 @@
                 <td>
                     <form action="/Biblioteca/EliminarCancionPlaylist" method="post">
                         <input name="idListaReproduccion_Cancion" value="@ListReproduc_Songs.idListaReproduccion_Cancion" style="display:none" />
+                        <input name="idListaReproduccion" value="@ListReproduc_Songs.idListaReproduccion" style="display:none" />
                         <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Eliminar</button>
                     </form>
                 </td>
