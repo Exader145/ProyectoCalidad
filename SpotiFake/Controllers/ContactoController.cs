@@ -41,7 +41,18 @@ namespace SpotiFake.Controllers
         public ViewResult getUsersAmigos(int idUsuario)
         {
             var amigos = spotiFakeContext.DetalleUsuarios.Where(o => o.idUsuario == idUsuario).Include(o=>o.usuario).ToList();
-            
+            List<Usuario> listAmigos = new List<Usuario>();
+            foreach (var contacto in amigos)
+            {
+                var iterar = spotiFakeContext.Usuarios.Where(o => o.idUsuario == contacto.idContacto).FirstOrDefault();
+                if (iterar != null)
+                {
+                    listAmigos.Add(iterar);
+                }
+
+            }
+            //var jsonSerialiser = new JavaScriptSerializer();
+            //var json = jsonSerialiser.Serialize(listAmigos);
             return View (amigos);
         }
         public ActionResult AgregarAmigo(int idUsuario, int idContacto)
@@ -68,7 +79,7 @@ namespace SpotiFake.Controllers
             spotiFakeContext.DetalleUsuarios.Remove(amigo);
             spotiFakeContext.SaveChanges();
             var amigos = spotiFakeContext.DetalleUsuarios.Where(o => o.idUsuario == idUsuario).Include(o => o.usuario).ToList();
-            return View("getUsersAmigos", amigos);
+            return View("Index", amigos);
         }
 
         public ActionResult Amigos(int idUsuario)

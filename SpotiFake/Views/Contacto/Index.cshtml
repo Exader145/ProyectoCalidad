@@ -50,7 +50,7 @@
     };
    
 
-    const setListAmigos = () => {
+    const upDateListAmigos = () => {
         var request = jQuery.ajax({
             url: '/Contacto/dejarAmigo?idUsuario=' +@Session["IdUsuario"],
             type: 'get'
@@ -59,13 +59,15 @@
             jQuery('#users').html(respuesta);
         });
     }
+    //pruebas
     const getlistUsers = () => {
-        var filas = document.querySelectorAll("#user");
+        var filas = document.getElementById('users');
 
         console.log(filas);
         
     }
-    
+
+    buscador.addEventListener('click',getlistUsers)
     amigos.addEventListener('click', listAmigos)
     desconocidos.addEventListener('click', listDesconocidos)
     
