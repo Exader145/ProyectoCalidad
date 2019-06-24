@@ -2,34 +2,45 @@
 
 @{
     Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
-    ViewBag.Title = "Contactos";
+    ViewBag.Title = "Amigos";
 }
-
-<h2>AGREGAR AMIGOS</h2>
-
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<br />
+    <button id="btnAmigos" type="button" class="btn btn-info">Lista de amigos</button>
+    <button id="btnDesconocidos" type="button" class="btn btn-info">Encontrar amigos</button>
+    <div class="nav navbar-nav navbar-right">
+        <input id="buscador" class="form-control" placeholder="Buscar"/>
+    </div>
+<br />
 <table class="table">
     <thead>
         <tr>
             <th>Nombres</th>
         </tr>
     </thead>
-    <tbody>
-        @foreach (var usuario in Model)
-        {
-            <tr>
-                <td>@usuario.nombre</td>
-                @*<td>
-                        <a href="/Cancion/modificar?id=@usuario.idUsuario">AÑADIR A AMIGOS</a>
-                    </td>*@
-                <td>
-                    <form action="/Contacto/AgregarAmigo" method="post">
-                        <input name="idContacto" value="@usuario.idUsuario" style="display:none" />
-                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">seguir </button><!--agregar session-->
-                        @*<button name="idU" value="@Session["IdUsuario"]" class="btn btn-primary">Añadir a amigos</button>*@
-                    </form>
-                </td>
-            </tr>
-        }
-
+    <tbody id="users">
+        
     </tbody>
 </table>
+<script>
+    const amigos = document.querySelector('#btnAmigos');
+    const buscador = document.querySelector('#buscador');
+    var listUsurios = {};
+    var request = jQuery.ajax({
+        url: '/Contacto/getUsers?idUsuario=' +@Session["IdUsuario"],
+        type: 'get'
+    });
+    request.done(function(respuesta){
+        jQuery('#users').html(respuesta);
+    });
+    const getlistUsers = () => {
+        var filas = document.querySelectorAll("#user");
+
+        console.log(filas);
+        
+    }
+    
+    buscador.addEventListener('click', getlistUsers)
+    
+    
+</script>
