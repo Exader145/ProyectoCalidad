@@ -15,10 +15,15 @@ namespace SpotiFake.Controllers
 
         public ActionResult Index(int idUsuario)
         {
-            var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario"&&o.idUsuario!=idUsuario).ToList();
+            //var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario"&&o.idUsuario!=idUsuario).ToList();
+            //return View(usuario);
+            return View();
+        }
+        public ActionResult getUsers(int idUsuario)
+        {
+            var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario" && o.idUsuario != idUsuario).ToList();
             return View(usuario);
         }
-
         public ActionResult AgregarAmigo(int idUsuario, int idContacto)
         {
             var amigoExisteBD = spotiFakeContext.DetalleUsuarios.Where(o=>o.idUsuario==idUsuario&&o.idContacto==idContacto).FirstOrDefault();

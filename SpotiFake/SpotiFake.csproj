@@ -262,6 +262,7 @@
     <Content Include="Views\Biblioteca\SeleccionarPlaylist.cshtml" />
     <Content Include="Views\Biblioteca\Detalle.cshtml" />
     <Content Include="Views\Contacto\Index.cshtml" />
+    <Content Include="Views\Contacto\getUsers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

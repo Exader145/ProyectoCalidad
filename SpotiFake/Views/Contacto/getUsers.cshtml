@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = null;
+}
+
+@foreach (var usuario in Model)
+{
+    <tr id="user">
+        <td >@usuario.nombre</td>
+        <td>
+            <form action="/Contacto/AgregarAmigo" method="post">
+                <input name="idContacto" value="@usuario.idUsuario" style="display:none" />
+                <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">seguir </button>
+            </form>
+        </td>
+    </tr>
+}
