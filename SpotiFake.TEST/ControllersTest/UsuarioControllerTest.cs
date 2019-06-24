@@ -35,20 +35,20 @@ namespace SpotiFake.TEST.ControllersTest
             Assert.IsNotNull(result);
         }
 
-        [Test]
-        public void probarUsuarioIndexRetornaListaCancionesRegistradas()
-        {
-            var idUsuario = 2;
+        //[Test]
+        //public void probarUsuarioIndexRetornaListaCancionesRegistradas()
+        //{
+        //    var idUsuario = 2;
 
-            var mock = new Mock<IUsuarioService>();
-            mock.Setup(o => o.obtenerListaCancionesRegistradas());
+        //    var mock = new Mock<IUsuarioService>();
+        //    mock.Setup(o => o.obtenerListaCancionesRegistradas());
 
-            var controller = new UsuarioController(mock.Object);
-            var result = controller.UsuarioIndex(idUsuario) as ViewResult;
+        //    var controller = new UsuarioController(mock.Object);
+        //    var result = controller.UsuarioIndex(idUsuario) as ViewResult;
 
-            Assert.IsInstanceOf<ViewResult>(result);
-            mock.Verify(o => o.obtenerListaCancionesRegistradas(), Times.AtLeastOnce);
-        }
+        //    Assert.IsInstanceOf<ViewResult>(result);
+        //    mock.Verify(o => o.obtenerListaCancionesRegistradas(), Times.AtLeastOnce);
+        //}
 
             }
 }

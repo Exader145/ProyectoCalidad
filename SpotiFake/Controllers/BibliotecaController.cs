@@ -129,5 +129,12 @@ namespace SpotiFake.Controllers
 
             return View(listaCanciones);
         }
+
+        public ActionResult EliminarCancionPlaylist(int idListaReproduccion_Cancion, int idUsuario)
+        {
+            service.eliminarCancionPlaylist(idListaReproduccion_Cancion);
+
+            return RedirectToAction("Detalle");
+        }
     }
 }

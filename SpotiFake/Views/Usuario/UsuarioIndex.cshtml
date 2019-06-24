@@ -34,7 +34,7 @@
                 <form action="/Usuario/ReproducirCancion" method="post">
                     <input name="idCancion" value="@cancion.idCancion" style="display:none" />
                     <input name="viewName" value="@ViewBag.viewName" style="display:none" />
-                    <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">REPRODUCIR</button>
+                    <button id ="btnReproducir"name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">REPRODUCIR</button>
                 </form>
             </td>
             <td>
@@ -48,5 +48,34 @@
 
     </tbody>
 </table>
+
+<tr>
+    <td>
+        <form action="/Biblioteca/Index" method="post">
+            <input type="hidden" />
+            <button id="btnTuBiblioteca" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link"></button>
+        </form>
+    </td>
+    <td>
+        <form action="/Usuario/Historial" method="post">
+            <input type="hidden" />
+            <button id="btnCancionesRecientes" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link"></button>
+        </form>
+    </td>
+    <td>
+        <form action="/Explorar/IndexUsuario" method="post">
+            <input type="hidden" />
+            <button id="btnExplorar" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link"></button>
+        </form>
+    </td>
+    <td>
+        <form action="/Contacto/Index" method="post">
+            <input type="hidden" />
+            <button id="btnAmigos" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link"></button>
+        </form>
+    </td>
+    <td></td>
+    <td></td>
+</tr>
 
 

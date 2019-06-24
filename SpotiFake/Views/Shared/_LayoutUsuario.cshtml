@@ -19,7 +19,7 @@
                 </button>
                 <br />
                 <form action="/Usuario/UsuarioIndex" method="post">
-                    <button class="btn btn-link"">Inicio</button>
+                    <button class="btn btn-link">Inicio</button>
                     <br />
                 </form>
             </div>
@@ -28,7 +28,7 @@
                     <li>
                         <br />
                         <form action="/Biblioteca/Index" method="post">
-                            <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Tu Biblioteca</button>
+                            <button id="btnTuBiblioteca" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Tu Biblioteca</button>
                             <br />
                         </form>
 
@@ -36,16 +36,16 @@
                     <li>
                         <br />
                         <form action="/Usuario/Historial" method="post">
-                            <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Canciones Recientes</button>
+                            <button id="btnCancionesRecientes" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Canciones Recientes</button>
                             <br />
                         </form>
 
                     </li>
-                    
+
                     <li>
                         <br />
                         <form action="/Contacto/Index" method="post">
-                            <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Amigos</button>
+                            <button id="btnAmigos" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-link">Amigos</button>
                             <br />
                         </form>
 
