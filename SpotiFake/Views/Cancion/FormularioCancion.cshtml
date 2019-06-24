@@ -12,46 +12,46 @@
 
             <div class="form-group">
                 <label>Nombre de canción</label>
-                <input class="form-control" name="nombre" value="@Model.nombre" />
+                <input id="txtNombre" class="form-control" name="nombre" value="@Model.nombre" />
                 @Html.ValidationMessage("Nombre")
             </div>
 
             <div class="form-group">
                 <label>Nombre de artista</label>
-                <input class="form-control" name="artista" value="@Model.artista" />
+                <input id="txtArtista" class="form-control" name="artista" value="@Model.artista" />
                 @Html.ValidationMessage("Artista")
             </div>
 
             <div class="form-group">
                 <label>Nombre de álbum</label>
-                <input class="form-control" name="album" value="@Model.album" />
+                <input id="txtAlbum" class="form-control" name="album" value="@Model.album" />
                 @Html.ValidationMessage("Album")
             </div>
 
             <div class="form-group">
                 <label>Género</label>
-                <input class="form-control" name="genero" value="@Model.genero" />
+                <input id="txtGenero" class="form-control" name="genero" value="@Model.genero" />
                 @Html.ValidationMessage("Genero")
             </div>
 
             <div class="form-group">
                 <label>Duración de canción</label>
-                <input class="form-control" name="duracionCancion" value="@Model.duracionCancion" />
+                <input id="txtDuracion" class="form-control" name="duracionCancion" value="@Model.duracionCancion" />
                 @Html.ValidationMessage("Duracion")
             </div>
 
             <div class="form-group">
                 <label>Fecha de lanzamiento</label>
-                <input class="form-control" type="date" name="fechaLanzamiento" value="@Model.fechaLanzamiento" />
+                <input id="txtFechaLanzamiento" class="form-control" type="date" name="fechaLanzamiento" value="@Model.fechaLanzamiento" />
                 @Html.ValidationMessage("FechaLanzamiento")
             </div>
 
             <div class="form-group">
                 <label>Nombre de imagen</label>
-                <input class="form-control" name="imagen" value="@Model.imagen" />
+                <input id="txtImagen" class="form-control" name="imagen" value="@Model.imagen" />
             </div>
 
-            <button class="btn-danger">Guardar</button>
+            <button id="btnAgregarCancion" class="btn-danger">Guardar</button>
 
         </form>
     </div>

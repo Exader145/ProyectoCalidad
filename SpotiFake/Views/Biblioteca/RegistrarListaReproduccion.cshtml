@@ -12,10 +12,10 @@
         <form action="/Biblioteca/AgregarListaDeReproduccion" method="post">
             <div class="form-group">
                 <label>Nombre de la Lista </label>
-                <input class="form-control" name="nombre" value="@Model.nombre" required />
+                <input id="txtNombrePlaylist" class="form-control" name="nombre" value="@Model.nombre" required />
             </div>
             
-            <button class="btn-danger"  name="idUsuario" value="@Session["IdUsuario"]">Guardar</button>
+            <button id="btnGuardarNuevoPlaylist" class="btn-danger"  name="idUsuario" value="@Session["IdUsuario"]">Guardar</button>
 
         </form>
     </div>
