@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace SpotiFake.Controllers
 {
@@ -32,14 +33,16 @@ namespace SpotiFake.Controllers
                 }
                 
             }
+            IEnumerable<Usuario> listcontact = listContactos;
+            var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario" && o.idUsuario != idUsuario).ToList().Except(listcontact);
             
-            var usuario = spotiFakeContext.Usuarios.Where(o => o.rol == "Usuario" && o.idUsuario != idUsuario).ToList();
             return View(usuario);
         }
-        public ActionResult getUsersAmigos(int idUsuario)
+        public ViewResult getUsersAmigos(int idUsuario)
         {
             var amigos = spotiFakeContext.DetalleUsuarios.Where(o => o.idUsuario == idUsuario).Include(o=>o.usuario).ToList();
-            return View(amigos);
+            
+            return View (amigos);
         }
         public ActionResult AgregarAmigo(int idUsuario, int idContacto)
         {
