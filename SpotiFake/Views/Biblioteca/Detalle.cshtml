@@ -32,13 +32,13 @@
                 <td>
                     <form action="/Usuario/ReproducirCancion" method="post">
                         <input name="idCancion" value="@ListReproduc_Songs.cancion.idCancion" style="display:none" />
-                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">reproducir</button>
+                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Reproducir</button>
                     </form>
                 </td>
                 <td>
-                    <form action="">
-                        <input name="idCancion" value="@ListReproduc_Songs.cancion.idCancion" style="display:none" />
-                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">eliminar</button>
+                    <form action="/Biblioteca/EliminarCancionPlaylist" method="post">
+                        <input name="idListaReproduccion_Cancion" value="@ListReproduc_Songs.idListaReproduccion_Cancion" style="display:none" />
+                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Eliminar</button>
                     </form>
                 </td>
             </tr>

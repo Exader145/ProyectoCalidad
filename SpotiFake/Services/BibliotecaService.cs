@@ -82,5 +82,11 @@ namespace SpotiFake.Services
 
             return listaCanciones;
         }
+
+        public void eliminarCancionPlaylist(int idListaReproduccion_Cancion)
+        {
+            var cancion = context.listaReproduccion_Cancion.Where(o => o.idListaReproduccion_Cancion == idListaReproduccion_Cancion).FirstOrDefault();
+            context.listaReproduccion_Cancion.Remove(cancion);
+        }
     }
 }

@@ -26,5 +26,7 @@ namespace SpotiFake.Interface
         void agregarCancionAListaReproduccion(int idCancion, int idListaReproduccion);
 
         List<ListaReproduccion_Cancion>obtenerCancionesDeUnaListaReproduccion(int idListaReproduccion);
+
+        void eliminarCancionPlaylist(int idListaReproduccion_Cancion);
     }
 }
