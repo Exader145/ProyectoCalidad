@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_LayoutUsuario.cshtml"; ViewBag.Title = "Detalle";
 }
 
-<h2>PlayLists</h2>
+<h2 id="paginaPlaylist">PlayLists</h2>
 
 <br />
 <table class="table">
@@ -32,14 +32,14 @@
                 <td>
                     <form action="/Usuario/ReproducirCancion" method="post">
                         <input name="idCancion" value="@ListReproduc_Songs.cancion.idCancion" style="display:none" />
-                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Reproducir</button>
+                        <button id="btnReproducirCancion" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Reproducir</button>
                     </form>
                 </td>
                 <td>
                     <form action="/Biblioteca/EliminarCancionPlaylist" method="post">
                         <input name="idListaReproduccion_Cancion" value="@ListReproduc_Songs.idListaReproduccion_Cancion" style="display:none" />
                         <input name="idListaReproduccion" value="@ListReproduc_Songs.idListaReproduccion" style="display:none" />
-                        <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Eliminar</button>
+                        <button id="btnEliminarCancionDePlaylist" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Eliminar</button>
                     </form>
                 </td>
             </tr>

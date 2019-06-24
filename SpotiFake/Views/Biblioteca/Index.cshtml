@@ -2,9 +2,12 @@
 @{
     Layout = "~/Views/Shared/_LayoutUsuario.cshtml";
 }
+
+<h1 id="paginaBiblioteca">BIBLIOTECA</h1>
+
 <br />
 <form action="/Biblioteca/RegistrarListaReproduccion" method="post">
-    <button class="btn-danger">Nueva Lista de reproduccion</button>
+    <button id="btnNuevaListaReproduccion" class="btn-danger">Nueva Lista de reproduccion</button>
 </form>
 <br />
 <table class="table">
@@ -20,13 +23,13 @@
             <td>@ListaReproduccion.nombre</td>
             <td>
                 <form action="/Biblioteca/Detalle" method="post">
-                <button name="idListaReproduccion" value="@ListaReproduccion.idListaReproduccion" class="btn btn-primary">Abrir PlayList</button>
+                <button id="btnAbrirPlaylist" name="idListaReproduccion" value="@ListaReproduccion.idListaReproduccion" class="btn btn-primary">Abrir PlayList</button>
                 </form>
             </td>
             <td>
                 <form action="/Biblioteca/EliminarListRe" method="post">
                     <input name="idListaReproduccion" value="@ListaReproduccion.idListaReproduccion" style="display:none" />
-                    <button name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Eliminar</button>
+                    <button id="btnEliminarPlaylist" name="idUsuario" value="@Session["IdUsuario"]" class="btn btn-primary">Eliminar</button>
                 </form>
             </td>
         </tr>

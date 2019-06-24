@@ -139,24 +139,24 @@ namespace SpotiFake.Controllers
             return RedirectToAction("IndexSys");
         }
 
-        public RedirectToRouteResult eliminar(int idCancion)
+        public RedirectToRouteResult eliminar(int id)
         {
             //var cancion = spotiFakeContext.Cancions.Where(d => d.idCancion == id).FirstOrDefault();
             //spotiFakeContext.Cancions.Remove(cancion);
             //spotiFakeContext.SaveChanges();
 
-            service.eliminarCancion(idCancion);
+            service.eliminarCancion(id);
 
             return RedirectToAction("Index");
         }
 
-        public RedirectToRouteResult eliminarSys(int idCancion)
+        public RedirectToRouteResult eliminarSys(int id)
         {
             //var cancion = spotiFakeContext.Cancions.Where(d => d.idCancion == id).FirstOrDefault();
             //spotiFakeContext.Cancions.Remove(cancion);
             //spotiFakeContext.SaveChanges();
 
-            service.eliminarCancion(idCancion);
+            service.eliminarCancion(id);
 
             return RedirectToAction("IndexSys");
         }

@@ -184,8 +184,8 @@
     <Compile Include="Services\CancionService.cs" />
     <Compile Include="Services\LoginService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
-    <Compile Include="Validations\AdministradorValidation.cs" />
-    <Compile Include="Validations\CancionValidation.cs" />
+    <Compile Include="Validation\AdministradorValidation.cs" />
+    <Compile Include="Validation\CancionValidation.cs" />
     <Compile Include="Validation\ValidacionExistente.cs" />
   </ItemGroup>
   <ItemGroup>
