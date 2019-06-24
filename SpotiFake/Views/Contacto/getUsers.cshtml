@@ -5,8 +5,8 @@
 
 @foreach (var usuario in Model)
 {
-    <tr>
-        <td id="user">@usuario.nombre</td>
+    <tr id="user">
+        <td >@usuario.nombre</td>
         <td>
             <form action="/Contacto/AgregarAmigo" method="post">
                 <input name="idContacto" value="@usuario.idUsuario" style="display:none" />

@@ -9,7 +9,7 @@
     <button id="btnAmigos" type="button" class="btn btn-info">Lista de amigos</button>
     <button id="btnDesconocidos" type="button" class="btn btn-info">Encontrar amigos</button>
     <div class="nav navbar-nav navbar-right">
-        <input class="form-control" placeholder="Buscar"/>
+        <input id="buscador" class="form-control" placeholder="Buscar"/>
     </div>
 <br />
 <table class="table">
@@ -23,13 +23,24 @@
     </tbody>
 </table>
 <script>
-    //const amigos = document.querySelector('#btnAmigos');
-    //var algo = document.querySelectorAll('#user');
+    const amigos = document.querySelector('#btnAmigos');
+    const buscador = document.querySelector('#buscador');
+    var listUsurios = {};
     var request = jQuery.ajax({
-                url: '/Contacto/getUsers?idUsuario=' +@Session["IdUsuario"],
-                type: 'get'
-            });
-            request.done(function(respuesta){
-                jQuery('#users').html(respuesta);
-            });
+        url: '/Contacto/getUsers?idUsuario=' +@Session["IdUsuario"],
+        type: 'get'
+    });
+    request.done(function(respuesta){
+        jQuery('#users').html(respuesta);
+    });
+    const getlistUsers = () => {
+        var filas = document.querySelectorAll("#user");
+
+        console.log(filas);
+        
+    }
+    
+    buscador.addEventListener('click', getlistUsers)
+    
+    
 </script>
