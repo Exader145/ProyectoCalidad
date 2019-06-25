@@ -98,9 +98,9 @@
     <Compile Include="ControllersTest\LoginControllerTest.cs" />
     <Compile Include="ControllersTest\UsuarioControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PruebasFuncionales\FuncionesAdministradorTest.cs" />
-    <Compile Include="PruebasFuncionales\FuncionesSysTest.cs" />
-    <Compile Include="PruebasFuncionales\FuncionesUsuarioTest.cs" />
+    <Compile Include="PruebasFuncionales\BFuncionesAdministradorTest.cs" />
+    <Compile Include="PruebasFuncionales\AFuncionesSysTest.cs" />
+    <Compile Include="PruebasFuncionales\CFuncionesUsuarioTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpotiFake\SpotiFake.csproj">

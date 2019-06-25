@@ -1,0 +1,223 @@
+﻿2019-06-25T16:18:08.2245422-05:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2019-06-25T16:18:08.2246317-05:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.0.352 in Framework netcore21 in x64 mode execution started
+2019-06-25T16:18:08.2246419-05:00;VSTestExecutionThread;Info;TestAdapter Location: D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2019-06-25T16:18:08.2619139-05:00;VSTestExecutionThread;Info;SpecRun: running tests in D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T16:18:08.2623370-05:00;VSTestExecutionThread;Info;Output folder configured to "D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\TestResults" (default)
+2019-06-25T16:18:08.2625095-05:00;VSTestExecutionThread;Info;Profile: 
+2019-06-25T16:18:08.3203932-05:00;VSTestExecutionThread;Info;Log file path: D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\TestResults\Unnamed project__2019-06-25T161808.log
+2019-06-25T16:18:08.3230961-05:00;VSTestExecutionThread;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T16:18:08.3296839-05:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2019-06-25T16:18:08.3398446-05:00;Thread#12;Info;Checking license
+2019-06-25T16:18:08.3403111-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T16:18:08.3418736-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T16:18:08.3764549-05:00;Thread#12;Info;Evaluation mode: test execution starts in 10 seconds... (this delay is removed in the registered version)
+2019-06-25T16:18:18.3770977-05:00;Thread#12;Info;Evaluation delay finished.
+2019-06-25T16:18:18.3922513-05:00;Thread#12;Info;License check completed
+2019-06-25T16:18:18.3925110-05:00;Thread#12;Info;starting test run
+2019-06-25T16:18:18.4052243-05:00;Thread#12;Info;Discovering target: Default
+2019-06-25T16:18:18.4054710-05:00;Thread#12;Info;Discovering tests from assembly: D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T16:18:18.5566598-05:00;Thread#12;Info;Discovered tests from assembly: D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T16:18:18.5584147-05:00:Test Suite Dump
+2019-06-25T16:18:18.5611505-05:00:#0: Unnamed project/ - 
+2019-06-25T16:18:18.5611663-05:00:#1: Default - 
+2019-06-25T16:18:18.5611681-05:00:#2: Cucumber - 
+2019-06-25T16:18:18.5611700-05:00:#3: Escenarios - 
+2019-06-25T16:18:18.5611723-05:00:#5: TestSinLogearse - 
+2019-06-25T16:18:18.5652506-05:00:#4: Background creando playlist - TestAssembly:Cucumber/Feature:Escenarios/Scenario:Background+creando+playlist
+2019-06-25T16:18:18.5652826-05:00:#6: Testeando registro del usuario - TestAssembly:Cucumber/Feature:TestSinLogearse/Scenario:Testeando+registro+del+usuario
+2019-06-25T16:18:18.5653614-05:00:End: Test Suite Dump
+2019-06-25T16:18:18.5931282-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T16:18:18.5967456-05:00:Thread#:Scheduler: testitem #4 from normal test queue 
+2019-06-25T16:18:18.5968319-05:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2019-06-25T16:18:18.6021355-05:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T16:18:18.6021461-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2019-06-25T16:18:18.6021480-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2019-06-25T16:18:18.6021522-05:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2019-06-25T16:18:18.6040583-05:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2019-06-25T16:18:18.6055901-05:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2019-06-25T16:18:18.6098318-05:00:Thread #0: creating new test thread executor for Cucumber, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2019-06-25T16:18:18.6130192-05:00:Thread #0: Creating test assembly executor for execution model OutProc
+2019-06-25T16:18:18.6140636-05:00:Thread #0: Creating test assembly executor for execution model OutProc
+2019-06-25T16:18:18.6147714-05:00:using TechTalk.SpecRun.Framework.Execution.OutOfProc.StreamJsonRPC.OutOfProcessTestAssemblyExecutorHost to execute tests
+2019-06-25T16:18:18.6225872-05:00:Assembly resolving Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T16:18:18.6315389-05:00:starting Out Of Process Executor
+2019-06-25T16:18:18.8000851-05:00:Executing test executor at 'C:\Program Files\dotnet\dotnet.exe' '"D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1\SpecFlowPlusRunner\netcoreapp2.1\TechTalk.SpecRun.Framework.Executor.anycpu.netcoreapp2_1.dll" 6868 2019-06-25T161808 "D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\TestResults"' in 'D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1'
+2019-06-25T16:18:18.8110361-05:00:Entering Memory Barrier for 16076
+2019-06-25T16:18:18.8110467-05:00:Leaving Memory Barrier for 16076
+2019-06-25T16:18:18.8174843-05:00:Out of Process Executor 16076 started
+2019-06-25T16:18:18.8299063-05:00:Waiting for endpoint
+2019-06-25T16:18:18.8320072-05:00:trying to connect to Out of Process Executor the 1 attempt
+2019-06-25T16:18:19.4216473-05:00:waiting for Connection of SpecRun.Executor.16076.Logger ended
+2019-06-25T16:18:19.4256170-05:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=es-MX, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T16:18:19.4270079-05:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=es, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T16:18:19.4282587-05:00:Assembly resolving Microsoft.VisualStudio.Threading, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T16:18:19.4863735-05:00:Connection to Out of Process Executor established in the 1 attempt
+2019-06-25T16:18:19.9112563-05:00:waiting for Connection of SpecRun.Executor.16076.Callback ended
+2019-06-25T16:18:20.1668508-05:00:2019-06-25T16:18:20.0394927-05:00:OutOfProcessTestAssemblyExecutor: initialized for D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll on test thread #0
+2019-06-25T16:18:20.1865990-05:00:Endpoint 16076 started
+2019-06-25T16:18:20.2147047-05:00:2019-06-25T16:18:20.2142646-05:00:OutOfProcessTestAssemblyExecutor: running tests...
+2019-06-25T16:18:20.3824263-05:00:Thread#0: Test #4/0 is started on thread #0
+2019-06-25T16:18:20.3957653-05:00:2019-06-25T16:18:20.3954583-05:00:Thread#0:T:2019-06-25T16:18:20.3926270-05:00:Assembly resolving TechTalk.SpecFlow, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2019-06-25T16:18:20.5900298-05:00:2019-06-25T16:18:20.5896407-05:00:Thread#0:T:-> Loading plugin D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1\SpecRun.Runtime.SpecFlowPlugin.dll
+2019-06-25T16:18:20.5930159-05:00:2019-06-25T16:18:20.5926816-05:00:Thread#0:T:2019-06-25T16:18:20.5924650-05:00:Assembly resolving TechTalk.SpecFlow, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2019-06-25T16:18:20.6001140-05:00:2019-06-25T16:18:20.5997772-05:00:Thread#0:T:-> Using default config
+2019-06-25T16:18:20.6196738-05:00:2019-06-25T16:18:20.6192430-05:00:Thread#0:T:2019-06-25T16:18:20.6189165-05:00:Assembly resolving Microsoft.VisualStudio.TestPlatform.ObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T16:18:20.6855622-05:00:2019-06-25T16:18:20.6850345-05:00:Thread#0:B:Given el correo del usario usuario1@correo.com
+2019-06-25T16:18:20.7195170-05:00:2019-06-25T16:18:20.7175521-05:00:Thread#0:T:2019-06-25T16:18:20.7174570-05:00:Assembly resolving WebDriver, Version=3.141.0.0, Culture=neutral, PublicKeyToken=null
+2019-06-25T16:18:20.7871029-05:00:2019-06-25T16:18:20.7867661-05:00:Thread#0:T:error: Exception has been thrown by the target of an invocation.
+2019-06-25T16:18:20.7898122-05:00:2019-06-25T16:18:20.7895970-05:00:Thread#0:B:And la contraseña 123
+2019-06-25T16:18:20.7906599-05:00:2019-06-25T16:18:20.7904179-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.7915420-05:00:2019-06-25T16:18:20.7913074-05:00:Thread#0:B:When el usaurio quiera iniciar session
+2019-06-25T16:18:20.7920879-05:00:2019-06-25T16:18:20.7918810-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.7929779-05:00:2019-06-25T16:18:20.7927692-05:00:Thread#0:B:Then la pagina web redirecionara a vista del usuario con nombre: usuario1
+2019-06-25T16:18:20.7934912-05:00:2019-06-25T16:18:20.7932436-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.7939059-05:00:2019-06-25T16:18:20.7937051-05:00:Thread#0:B:Given el ususario quiera crear una nueva play list
+2019-06-25T16:18:20.7943984-05:00:2019-06-25T16:18:20.7941350-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.7947758-05:00:2019-06-25T16:18:20.7945838-05:00:Thread#0:B:When registre la playList con nombre listanuemro1
+2019-06-25T16:18:20.7951751-05:00:2019-06-25T16:18:20.7949915-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.7956288-05:00:2019-06-25T16:18:20.7953959-05:00:Thread#0:B:Then la web restra la play list y la muestra
+2019-06-25T16:18:20.7960522-05:00:2019-06-25T16:18:20.7958611-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.8256679-05:00:Thread#0:TestItem#4:Scheduler: reschedule tests for testitem #4
+2019-06-25T16:18:20.8279696-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T16:18:20.8280628-05:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #4
+2019-06-25T16:18:20.8280721-05:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2019-06-25T16:18:20.8281110-05:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T16:18:20.8281152-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2019-06-25T16:18:20.8281175-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2019-06-25T16:18:20.8281203-05:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2019-06-25T16:18:20.8281333-05:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2019-06-25T16:18:20.8281426-05:00:Thread#0:Scheduler: with testItemExecutionIndex 1
+2019-06-25T16:18:20.9020417-05:00:Thread#0: Test #4/0 is finished on thread #0 as Failed within 0.5186818 seconds
+2019-06-25T16:18:20.9063111-05:00:Thread#0: Test #4/1 is started on thread #0
+2019-06-25T16:18:20.9070508-05:00:2019-06-25T16:18:20.9068060-05:00:Thread#0:B:Given el correo del usario usuario1@correo.com
+2019-06-25T16:18:20.9088535-05:00:2019-06-25T16:18:20.9086063-05:00:Thread#0:T:error: Exception has been thrown by the target of an invocation.
+2019-06-25T16:18:20.9093790-05:00:2019-06-25T16:18:20.9091243-05:00:Thread#0:B:And la contraseña 123
+2019-06-25T16:18:20.9098743-05:00:2019-06-25T16:18:20.9096248-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9103334-05:00:2019-06-25T16:18:20.9100871-05:00:Thread#0:B:When el usaurio quiera iniciar session
+2019-06-25T16:18:20.9108101-05:00:2019-06-25T16:18:20.9105648-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9111756-05:00:2019-06-25T16:18:20.9109887-05:00:Thread#0:B:Then la pagina web redirecionara a vista del usuario con nombre: usuario1
+2019-06-25T16:18:20.9116639-05:00:2019-06-25T16:18:20.9114427-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9120734-05:00:2019-06-25T16:18:20.9118749-05:00:Thread#0:B:Given el ususario quiera crear una nueva play list
+2019-06-25T16:18:20.9125460-05:00:2019-06-25T16:18:20.9122951-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9129013-05:00:2019-06-25T16:18:20.9127278-05:00:Thread#0:B:When registre la playList con nombre listanuemro1
+2019-06-25T16:18:20.9134031-05:00:2019-06-25T16:18:20.9131568-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9138372-05:00:2019-06-25T16:18:20.9136122-05:00:Thread#0:B:Then la web restra la play list y la muestra
+2019-06-25T16:18:20.9143797-05:00:2019-06-25T16:18:20.9141154-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9160493-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T16:18:20.9160590-05:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #4
+2019-06-25T16:18:20.9160618-05:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2019-06-25T16:18:20.9160748-05:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T16:18:20.9160771-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2019-06-25T16:18:20.9160785-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2019-06-25T16:18:20.9160804-05:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2019-06-25T16:18:20.9160882-05:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2019-06-25T16:18:20.9160919-05:00:Thread#0:Scheduler: with testItemExecutionIndex 2
+2019-06-25T16:18:20.9182991-05:00:Thread#0: Test #4/1 is finished on thread #0 as Failed within 0.0119527 seconds
+2019-06-25T16:18:20.9187911-05:00:Thread#0: Test #4/2 is started on thread #0
+2019-06-25T16:18:20.9192326-05:00:2019-06-25T16:18:20.9190235-05:00:Thread#0:B:Given el correo del usario usuario1@correo.com
+2019-06-25T16:18:20.9209973-05:00:2019-06-25T16:18:20.9207858-05:00:Thread#0:T:error: Exception has been thrown by the target of an invocation.
+2019-06-25T16:18:20.9214049-05:00:2019-06-25T16:18:20.9211888-05:00:Thread#0:B:And la contraseña 123
+2019-06-25T16:18:20.9218283-05:00:2019-06-25T16:18:20.9216340-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9222262-05:00:2019-06-25T16:18:20.9220310-05:00:Thread#0:B:When el usaurio quiera iniciar session
+2019-06-25T16:18:20.9226450-05:00:2019-06-25T16:18:20.9224419-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9230949-05:00:2019-06-25T16:18:20.9228384-05:00:Thread#0:B:Then la pagina web redirecionara a vista del usuario con nombre: usuario1
+2019-06-25T16:18:20.9235781-05:00:2019-06-25T16:18:20.9233411-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9240502-05:00:2019-06-25T16:18:20.9238119-05:00:Thread#0:B:Given el ususario quiera crear una nueva play list
+2019-06-25T16:18:20.9246694-05:00:2019-06-25T16:18:20.9243851-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9250381-05:00:2019-06-25T16:18:20.9248447-05:00:Thread#0:B:When registre la playList con nombre listanuemro1
+2019-06-25T16:18:20.9254838-05:00:2019-06-25T16:18:20.9252616-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9258562-05:00:2019-06-25T16:18:20.9256786-05:00:Thread#0:B:Then la web restra la play list y la muestra
+2019-06-25T16:18:20.9263139-05:00:2019-06-25T16:18:20.9260867-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9275493-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T16:18:20.9275591-05:00:Thread#:Scheduler: testitem #6 from normal test queue 
+2019-06-25T16:18:20.9275619-05:00:Thread#0:Scheduler: considering testitem #6 for thread 0
+2019-06-25T16:18:20.9275744-05:00:Thread#0:TestItem#6:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T16:18:20.9275762-05:00:Thread#0:TestItem#6:runsOnOneOtherThreadSpecific:False
+2019-06-25T16:18:20.9275776-05:00:Thread#0:TestItem#6:runsOnOneOtherThreadUnspecific:False
+2019-06-25T16:18:20.9275795-05:00:Thread#0:Scheduler: using testitem #6 for thread 0
+2019-06-25T16:18:20.9275864-05:00:Thread#0:Scheduler: Test #6 is scheduled for thread
+2019-06-25T16:18:20.9275902-05:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2019-06-25T16:18:20.9306056-05:00:Thread#0: Test #4/2 is finished on thread #0 as Failed within 0.0117932 seconds
+2019-06-25T16:18:20.9311505-05:00:Thread#0: Test #6/0 is started on thread #0
+2019-06-25T16:18:20.9328368-05:00:2019-06-25T16:18:20.9325966-05:00:Thread#0:B:Given el usuario no este logeado
+2019-06-25T16:18:20.9355591-05:00:2019-06-25T16:18:20.9353528-05:00:Thread#0:T:error: Exception has been thrown by the target of an invocation.
+2019-06-25T16:18:20.9360716-05:00:2019-06-25T16:18:20.9358216-05:00:Thread#0:B:And el nombre del usuario juan, su correo para ingresar nuevo@correo.com y su contraseña 123
+2019-06-25T16:18:20.9365539-05:00:2019-06-25T16:18:20.9363452-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9369504-05:00:2019-06-25T16:18:20.9367282-05:00:Thread#0:B:When el usaurio quiera registrarse en SpotiFake
+2019-06-25T16:18:20.9374759-05:00:2019-06-25T16:18:20.9372218-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9379489-05:00:2019-06-25T16:18:20.9377180-05:00:Thread#0:B:Then la pagina web redirecionara a vista del usuario con nombre: juan
+2019-06-25T16:18:20.9384007-05:00:2019-06-25T16:18:20.9382179-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9394891-05:00:Thread#0:TestItem#6:Scheduler: reschedule tests for testitem #6
+2019-06-25T16:18:20.9398638-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T16:18:20.9398731-05:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #6
+2019-06-25T16:18:20.9398758-05:00:Thread#0:Scheduler: considering testitem #6 for thread 0
+2019-06-25T16:18:20.9399018-05:00:Thread#0:TestItem#6:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T16:18:20.9399041-05:00:Thread#0:TestItem#6:runsOnOneOtherThreadSpecific:False
+2019-06-25T16:18:20.9399055-05:00:Thread#0:TestItem#6:runsOnOneOtherThreadUnspecific:False
+2019-06-25T16:18:20.9399069-05:00:Thread#0:Scheduler: using testitem #6 for thread 0
+2019-06-25T16:18:20.9399185-05:00:Thread#0:Scheduler: Test #6 is scheduled for thread
+2019-06-25T16:18:20.9399231-05:00:Thread#0:Scheduler: with testItemExecutionIndex 1
+2019-06-25T16:18:20.9416104-05:00:Thread#0: Test #6/0 is finished on thread #0 as Failed within 0.010444 seconds
+2019-06-25T16:18:20.9420885-05:00:Thread#0: Test #6/1 is started on thread #0
+2019-06-25T16:18:20.9425634-05:00:2019-06-25T16:18:20.9423505-05:00:Thread#0:B:Given el usuario no este logeado
+2019-06-25T16:18:20.9443230-05:00:2019-06-25T16:18:20.9440554-05:00:Thread#0:T:error: Exception has been thrown by the target of an invocation.
+2019-06-25T16:18:20.9447190-05:00:2019-06-25T16:18:20.9445349-05:00:Thread#0:B:And el nombre del usuario juan, su correo para ingresar nuevo@correo.com y su contraseña 123
+2019-06-25T16:18:20.9451841-05:00:2019-06-25T16:18:20.9450001-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9455440-05:00:2019-06-25T16:18:20.9453733-05:00:Thread#0:B:When el usaurio quiera registrarse en SpotiFake
+2019-06-25T16:18:20.9459749-05:00:2019-06-25T16:18:20.9457680-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9463440-05:00:2019-06-25T16:18:20.9461427-05:00:Thread#0:B:Then la pagina web redirecionara a vista del usuario con nombre: juan
+2019-06-25T16:18:20.9467526-05:00:2019-06-25T16:18:20.9465736-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9479510-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T16:18:20.9479603-05:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #6
+2019-06-25T16:18:20.9479626-05:00:Thread#0:Scheduler: considering testitem #6 for thread 0
+2019-06-25T16:18:20.9479761-05:00:Thread#0:TestItem#6:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T16:18:20.9479784-05:00:Thread#0:TestItem#6:runsOnOneOtherThreadSpecific:False
+2019-06-25T16:18:20.9479798-05:00:Thread#0:TestItem#6:runsOnOneOtherThreadUnspecific:False
+2019-06-25T16:18:20.9479816-05:00:Thread#0:Scheduler: using testitem #6 for thread 0
+2019-06-25T16:18:20.9479900-05:00:Thread#0:Scheduler: Test #6 is scheduled for thread
+2019-06-25T16:18:20.9479937-05:00:Thread#0:Scheduler: with testItemExecutionIndex 2
+2019-06-25T16:18:20.9494072-05:00:Thread#0: Test #6/1 is finished on thread #0 as Failed within 0.0072974 seconds
+2019-06-25T16:18:20.9498343-05:00:Thread#0: Test #6/2 is started on thread #0
+2019-06-25T16:18:20.9502888-05:00:2019-06-25T16:18:20.9500593-05:00:Thread#0:B:Given el usuario no este logeado
+2019-06-25T16:18:20.9519635-05:00:2019-06-25T16:18:20.9517256-05:00:Thread#0:T:error: Exception has been thrown by the target of an invocation.
+2019-06-25T16:18:20.9524468-05:00:2019-06-25T16:18:20.9521945-05:00:Thread#0:B:And el nombre del usuario juan, su correo para ingresar nuevo@correo.com y su contraseña 123
+2019-06-25T16:18:20.9529268-05:00:2019-06-25T16:18:20.9527283-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9533006-05:00:2019-06-25T16:18:20.9531007-05:00:Thread#0:B:When el usaurio quiera registrarse en SpotiFake
+2019-06-25T16:18:20.9537546-05:00:2019-06-25T16:18:20.9535598-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9541395-05:00:2019-06-25T16:18:20.9539540-05:00:Thread#0:B:Then la pagina web redirecionara a vista del usuario con nombre: juan
+2019-06-25T16:18:20.9545569-05:00:2019-06-25T16:18:20.9543584-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T16:18:20.9558926-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T16:18:20.9559046-05:00:Thread#:Scheduler: at the end of normal test queue
+2019-06-25T16:18:20.9559069-05:00:Thread#0:Scheduler: enumerator for thread is at end
+2019-06-25T16:18:20.9559093-05:00:Thread#0:Scheduler: No more tests for thread
+2019-06-25T16:18:20.9649778-05:00:Thread#0: Test #6/2 is finished on thread #0 as Failed within 0.0151036 seconds
+2019-06-25T16:18:20.9765437-05:00:RPC Client disconnected, because 'Disposed'. 
+LastMessage: 
+Description:Stream has been disposed
+Exception:<none>
+2019-06-25T16:18:20.9823213-05:00:Assembly resolving System.Diagnostics.Process.resources, Version=4.2.1.0, Culture=es-MX, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T16:18:20.9827304-05:00:Assembly resolving System.Diagnostics.Process.resources, Version=4.2.1.0, Culture=es, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T16:18:20.9854754-05:00:Unable to stop executor process: System.InvalidOperationException: No process is associated with this object.
+   at System.Diagnostics.Process.EnsureState(State state)
+   at System.Diagnostics.Process.get_HasExited()
+   at TechTalk.SpecRun.Framework.Execution.OutOfProc.OutProcExecutorManager.StopExecutorProcess(Process executorProcess)
+2019-06-25T16:18:20.9971577-05:00:Thread#-1:Scheduler: get next test for thread -1
+2019-06-25T16:18:20.9971707-05:00:Thread#:Scheduler: at the end of normal test queue
+2019-06-25T16:18:20.9971735-05:00:Thread#-1:Scheduler: enumerator for thread is at end
+2019-06-25T16:18:21.0102174-05:00;Thread#12;Info;test run finished
+2019-06-25T16:18:21.0104826-05:00;Thread#12;Info;publishing test results
+2019-06-25T16:18:21.0108184-05:00;Thread#12;Info;Not publishing results.
+2019-06-25T16:18:21.0109177-05:00;Thread#12;Info;test results published
+2019-06-25T16:18:21.0109914-05:00;Thread#12;Info;generating reports
+2019-06-25T16:18:21.1297030-05:00;Thread#12;Info;Starting external report generation process
+2019-06-25T16:18:23.5414849-05:00;Thread#12;Info;Successfully generated reports.
+2019-06-25T16:18:23.5440560-05:00;Thread#12;Info;Successfully generated reports
+2019-06-25T16:18:23.5543015-05:00:Total: 2 (test executions: 6)
+2019-06-25T16:18:23.5580632-05:00:Succeeded: 0
+2019-06-25T16:18:23.5589550-05:00:Ignored: 0
+2019-06-25T16:18:23.5597503-05:00:Pending: 0
+2019-06-25T16:18:23.5597573-05:00:Skipped: 0
+2019-06-25T16:18:23.5605490-05:00:Failed: 2
+2019-06-25T16:18:23.5730753-05:00;VSTestExecutionThread;Info;Adding attachments to VSTest
+2019-06-25T16:18:23.5731481-05:00;VSTestExecutionThread;Info;adding Test Execution Report 'D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\TestResults\Unnamed project__2019-06-25T161808.html'
+========== End of log file ==========

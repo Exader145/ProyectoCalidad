@@ -172,6 +172,10 @@
     <Compile Include="Interface\Validations\IAdministradorValidation.cs" />
     <Compile Include="Interface\Validations\ICancionValidation.cs" />
     <Compile Include="Managers\SessionManager.cs" />
+    <Compile Include="Migrations\201906252059016_InitDatabase.cs" />
+    <Compile Include="Migrations\201906252059016_InitDatabase.Designer.cs">
+      <DependentUpon>201906252059016_InitDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cancion.cs" />
     <Compile Include="Models\CancionesEscuchadas.cs" />
@@ -208,7 +212,10 @@
     <Content Include="Images\Chabelos.jpg" />
     <Content Include="Images\Dani california.gif" />
     <Content Include="Images\Feel good inc.jpg" />
+    <Content Include="Images\Hold the line.jpg" />
     <Content Include="Images\In the end.jpg" />
+    <Content Include="Images\Roxanne.jpg" />
+    <Content Include="Images\Song 2.jpg" />
     <Content Include="Images\You%27re beautiful.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -281,6 +288,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906252059016_InitDatabase.resx">
+      <DependentUpon>201906252059016_InitDatabase.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

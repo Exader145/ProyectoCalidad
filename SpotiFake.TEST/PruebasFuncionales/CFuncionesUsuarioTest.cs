@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 namespace SpotiFake.TEST.PruebasFuncionales
 {
     [TestFixture]
-    public class FuncionesUsuarioTest
+    public class CFuncionesUsuarioTest
     {
         [Test]
-        public void AIniciarSesionUsuario()
+        public void ARegistrarUsuario()
         {
             var options = new ChromeOptions();
             options.AddArgument("--start-maximized");
@@ -21,7 +21,38 @@ namespace SpotiFake.TEST.PruebasFuncionales
             var chromeDriver = new ChromeDriver(options);
             chromeDriver.Url = "http://localhost:57748/";
 
-            chromeDriver.FindElementById("user").SendKeys("usuario@hotmail.com");
+            chromeDriver.FindElementById("Registrar").Click();
+            Thread.Sleep(TimeSpan.FromSeconds(1));
+
+            chromeDriver.FindElementById("txtNombre").SendKeys("Usuario 2");
+            Thread.Sleep(TimeSpan.FromSeconds(1));
+
+            chromeDriver.FindElementById("txtCorreo").SendKeys("usuario2@hotmail.com");
+            Thread.Sleep(TimeSpan.FromSeconds(1));
+
+            chromeDriver.FindElementById("txtPassword").SendKeys("1234");
+            Thread.Sleep(TimeSpan.FromSeconds(1));
+
+            chromeDriver.FindElementById("btnRegistrarUsuario").Click();
+            Thread.Sleep(TimeSpan.FromSeconds(1));
+
+            var paginaIndex = chromeDriver.FindElementById("saludoAlUsuario");
+            Assert.IsNotNull(paginaIndex);
+
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+            chromeDriver.Close();
+        }
+
+        [Test]
+        public void BIniciarSesionUsuario()
+        {
+            var options = new ChromeOptions();
+            options.AddArgument("--start-maximized");
+
+            var chromeDriver = new ChromeDriver(options);
+            chromeDriver.Url = "http://localhost:57748/";
+
+            chromeDriver.FindElementById("user").SendKeys("usuario2@hotmail.com");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("pass").SendKeys("1234");
@@ -38,7 +69,7 @@ namespace SpotiFake.TEST.PruebasFuncionales
         }
 
         [Test]
-        public void BReproducirYMostrarHistorialCancioneReproducidas()
+        public void CReproducirYMostrarHistorialCancioneReproducidas()
         {
             var options = new ChromeOptions();
             options.AddArgument("--start-maximized");
@@ -178,70 +209,11 @@ namespace SpotiFake.TEST.PruebasFuncionales
             chromeDriver.Close();
         }
 
-        [Test]
-        public void GRegistrarUsuario()
-        {
-            var options = new ChromeOptions();
-            options.AddArgument("--start-maximized");
-
-            var chromeDriver = new ChromeDriver(options);
-            chromeDriver.Url = "http://localhost:57748/";
-
-            chromeDriver.FindElementById("Registrar").Click();
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-
-            chromeDriver.FindElementById("txtNombre").SendKeys("Usuario 1");
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-
-            chromeDriver.FindElementById("txtCorreo").SendKeys("usuario1@otmail.com");
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-
-            chromeDriver.FindElementById("txtPassword").SendKeys("123456");
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-
-            chromeDriver.FindElementById("btnRegistrarUsuario").Click();
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-
-            var paginaIndex = chromeDriver.FindElementById("saludoAlUsuario");
-            Assert.IsNotNull(paginaIndex);
-
-            Thread.Sleep(TimeSpan.FromSeconds(2));
-            chromeDriver.Close();
-        }
-
 
         //PRUEBAS QUE NO DEBERIAN PASAR
 
         [Test]
-        public void AIniciarSesionUsuarioIncorrecto()
-        {
-            var options = new ChromeOptions();
-            options.AddArgument("--start-maximized");
-
-            var chromeDriver = new ChromeDriver(options);
-            chromeDriver.Url = "http://localhost:57748/";
-
-            chromeDriver.FindElementById("user").SendKeys("roger_65@hotmail.com");
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-
-            chromeDriver.FindElementById("pass").SendKeys("12346");
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-
-            chromeDriver.FindElementById("btnIniciarSession").Click();
-            Thread.Sleep(TimeSpan.FromSeconds(2));
-
-            chromeDriver.FindElementById("btnRegistrarUsuario").Click();
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-
-            var paginaIndex = chromeDriver.FindElementById("saludoAlUsuario");
-            Assert.IsNotNull(paginaIndex);
-
-            Thread.Sleep(TimeSpan.FromSeconds(2));
-            chromeDriver.Close();
-        }
-
-        [Test]
-        public void GRegistrarUsuarioDatosUsuarioIncorrecto()
+        public void ARegistrarUsuarioDatosUsuarioIncorrecto()
         {
             var options = new ChromeOptions();
             options.AddArgument("--start-maximized");
@@ -268,9 +240,37 @@ namespace SpotiFake.TEST.PruebasFuncionales
             chromeDriver.Close();
         }
 
+        [Test]
+        public void BIniciarSesionUsuarioIncorrecto()
+        {
+            var options = new ChromeOptions();
+            options.AddArgument("--start-maximized");
+
+            var chromeDriver = new ChromeDriver(options);
+            chromeDriver.Url = "http://localhost:57748/";
+
+            chromeDriver.FindElementById("user").SendKeys("roger_65@hotmail.com");
+            Thread.Sleep(TimeSpan.FromSeconds(1));
+
+            chromeDriver.FindElementById("pass").SendKeys("12346");
+            Thread.Sleep(TimeSpan.FromSeconds(1));
+
+            chromeDriver.FindElementById("btnIniciarSession").Click();
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+
+            chromeDriver.FindElementById("btnRegistrarUsuario").Click();
+            Thread.Sleep(TimeSpan.FromSeconds(1));
+
+            var paginaIndex = chromeDriver.FindElementById("saludoAlUsuario");
+            Assert.IsNotNull(paginaIndex);
+
+            Thread.Sleep(TimeSpan.FromSeconds(2));
+            chromeDriver.Close();
+        }
+
         public void iniciarSesionComoUsuario(ChromeDriver chromeDriver)
         {
-            chromeDriver.FindElementById("user").SendKeys("usuario@hotmail.com");
+            chromeDriver.FindElementById("user").SendKeys("usuario2@hotmail.com");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("pass").SendKeys("1234");

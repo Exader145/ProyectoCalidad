@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace SpotiFake.TEST.PruebasFuncionales
 {
     [TestFixture]
-    public class FuncionesAdministradorTest
+    public class BFuncionesAdministradorTest
     {
         [Test]
         public void AIniciarSesionAdministrador()
@@ -21,7 +21,7 @@ namespace SpotiFake.TEST.PruebasFuncionales
             var chromeDriver = new ChromeDriver(options);
             chromeDriver.Url = "http://localhost:57748/";
 
-            chromeDriver.FindElementById("user").SendKeys("administrador@hotmail.com");
+            chromeDriver.FindElementById("user").SendKeys("administrador2@hotmail.com");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("pass").SendKeys("1234");
@@ -66,13 +66,13 @@ namespace SpotiFake.TEST.PruebasFuncionales
             chromeDriver.FindElementById("txtGenero").SendKeys("Rock");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
-            chromeDriver.FindElementById("txtDuracion").SendKeys("3,12");
+            chromeDriver.FindElementById("txtDuracion").SendKeys("3.12");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("txtFechaLanzamiento").SendKeys("12/05/1990");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
-            chromeDriver.FindElementById("txtImagen").SendKeys("Hold the line");
+            chromeDriver.FindElementById("txtImagen").SendKeys("Hold the line.jpg");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("btnAgregarCancion").Click();
@@ -124,7 +124,7 @@ namespace SpotiFake.TEST.PruebasFuncionales
 
             var duracion = chromeDriver.FindElementById("txtDuracion");
             duracion.Clear();
-            duracion.SendKeys("3,12");
+            duracion.SendKeys("3.12");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             var fechaLanzamiento = chromeDriver.FindElementById("txtFechaLanzamiento");
@@ -134,7 +134,7 @@ namespace SpotiFake.TEST.PruebasFuncionales
 
             var imagen = chromeDriver.FindElementById("txtImagen");
             imagen.Clear();
-            imagen.SendKeys("Roxanne");
+            imagen.SendKeys("Roxanne.jpg");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("btnModificar").Click();
@@ -264,7 +264,7 @@ namespace SpotiFake.TEST.PruebasFuncionales
 
         public void iniciarSesionComoAdministrador(ChromeDriver chromeDriver)
         {
-            chromeDriver.FindElementById("user").SendKeys("administrador@hotmail.com");
+            chromeDriver.FindElementById("user").SendKeys("administrador2@hotmail.com");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("pass").SendKeys("1234");

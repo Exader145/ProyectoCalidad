@@ -1,0 +1,13 @@
+﻿2019-06-25T16:17:56.5967210-05:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2019-06-25T16:17:56.5967952-05:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.0.352 in Framework netcore21 in x64 mode execution started
+2019-06-25T16:17:56.5968040-05:00;VSTestExecutionThread;Info;TestAdapter Location: D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2019-06-25T16:17:56.6322072-05:00;VSTestExecutionThread;Info;SpecRun: running tests in D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T16:17:56.6326171-05:00;VSTestExecutionThread;Info;Output folder configured to "D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\TestResults" (default)
+2019-06-25T16:17:56.6328017-05:00;VSTestExecutionThread;Info;Profile: 
+2019-06-25T16:17:56.6861373-05:00;VSTestExecutionThread;Info;Log file path: D:\fher_\Documents\Visual Studio\CALIDAD\SpotiFake\Proyecto Final\ProyectoCalidad\TestResults\Unnamed project__2019-06-25T161756.log
+2019-06-25T16:17:56.6886555-05:00;VSTestExecutionThread;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T16:17:56.6948557-05:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2019-06-25T16:17:56.7034428-05:00;Thread#12;Info;Checking license
+2019-06-25T16:17:56.7038032-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T16:17:56.7052182-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T16:17:56.7432638-05:00;Thread#12;Info;Evaluation mode: test execution starts in 8 seconds... (this delay is removed in the registered version)

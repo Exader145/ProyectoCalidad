@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace SpotiFake.TEST.PruebasFuncionales
 {
     [TestFixture]
-    public class FuncionesSysTest
+    public class AFuncionesSysTest
     {
         [Test]
         public void AIniciarSesionSys()
@@ -95,12 +95,12 @@ namespace SpotiFake.TEST.PruebasFuncionales
 
             var correo = chromeDriver.FindElementById("txtCorreo");
             correo.Clear();
-            correo.SendKeys("jose@hotmail.com");
+            correo.SendKeys("administrador2@hotmail.com");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             var contraseña = chromeDriver.FindElementById("txtContraseña");
             contraseña.Clear();
-            contraseña.SendKeys("123456");
+            contraseña.SendKeys("1234");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("btnGuardarAdministrador").Click();
@@ -164,13 +164,13 @@ namespace SpotiFake.TEST.PruebasFuncionales
             chromeDriver.FindElementById("txtGenero").SendKeys("Pop");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
-            chromeDriver.FindElementById("txtDuracion").SendKeys("3,30");
+            chromeDriver.FindElementById("txtDuracion").SendKeys("3.30");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("txtFechaLanzamiento").SendKeys("12-05-2010");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
-            chromeDriver.FindElementById("txtImagen").SendKeys("Song 2");
+            chromeDriver.FindElementById("txtImagen").SendKeys("Song 2.jpg");
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
             chromeDriver.FindElementById("btnGuardar").Click();
