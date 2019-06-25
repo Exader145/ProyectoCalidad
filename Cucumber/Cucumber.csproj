@@ -35,6 +35,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Escenarios.feature.cs</LastGenOutput>
     </None>
+    <None Update="TestSinLogearse.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TestSinLogearse.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
