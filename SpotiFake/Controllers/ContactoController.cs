@@ -22,8 +22,8 @@ namespace SpotiFake.Controllers
         }
         public ActionResult getUsers(int idUsuario)
         {
-            List<DetalleUsuario> contactos = spotiFakeContext.DetalleUsuarios.Where(o => o.idUsuario == idUsuario).ToList();
-            List<Usuario> listContactos = new List<Usuario>();
+            var contactos = spotiFakeContext.DetalleUsuarios.Where(o => o.idUsuario == idUsuario).ToList();
+            var listContactos = new List<Usuario>();
             foreach (var contacto in contactos)
             {
                 var iterar=spotiFakeContext.Usuarios.Where(o => o.idUsuario == contacto.idContacto).FirstOrDefault();
