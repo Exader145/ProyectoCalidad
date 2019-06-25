@@ -39,16 +39,16 @@ namespace Cucumber
             btnIniciarSession.Click();
         }
         [Then(@"la pagina web redirecionara a vista del usuario con nombre: (.*)")]
-        public void ThenLaInterfazDeLaWebCambiaraALaPaginaInicioDelUsuario(string userName)
+        public void ThenLaPaginaWebRedirecionaraALaVistaDelUsuarioConNombre(string userName)
         {
             Thread.Sleep(TimeSpan.FromSeconds(2));
             var saludoUser = driver.FindElementById("saludoAlUsuario");
             Assert.AreEqual(saludoUser.Text, "Bienvenido " + userName);
-            driver.Close();
+            
         }
 
         [Given(@"el usuario no este logeado")]
-        public void GivenRegistroUsuario()
+        public void GivenElUsuarioNoEsteLogeado()
         {
             driver.Url = "http://localhost:57748/";
             Thread.Sleep(TimeSpan.FromSeconds(1));
@@ -58,7 +58,7 @@ namespace Cucumber
             btnirRegistrar.Click();
         }
         [Given(@"el nombre del usuario (.*), su correo para ingresar (.*) y su contraseña (.*)")]
-        public void GivenDatosDelNuevoUsuario(string nameUser,string userCorreo,string userPass )
+        public void GivenElNombreDelUsuarioSuCorreoParaIngresarYSuContraseña(string nameUser,string userCorreo,string userPass )
         {
             Thread.Sleep(TimeSpan.FromSeconds(1));
             var inputName = driver.FindElementById("txtNombre");
@@ -67,18 +67,18 @@ namespace Cucumber
 
             Thread.Sleep(TimeSpan.FromSeconds(1));
 
-            inputName.SendKeys("juan");
-            inputCorreo.SendKeys("juan@jdkjd.com");
-            inputPass.SendKeys("123");
+            inputName.SendKeys(nameUser);
+            inputCorreo.SendKeys(userCorreo);
+            inputPass.SendKeys(userPass);
 
         }
         [When(@"el usaurio quiera registrarse en SpotiFake")]
-        public void WhenElusuarioSeRegistre()
+        public void WhenElUsuarioQuieraRegistrarseEnSpotiFake()
         {
-            var btnRegistrar2 = driver.FindElementById("btnRegistrarUsuario2");
-
+            var btnRegistrar2 = driver.FindElementById("btnRegistrarUsuario");
             Thread.Sleep(TimeSpan.FromSeconds(1));
             btnRegistrar2.Click();
+            
         }
         
         

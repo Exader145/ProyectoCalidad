@@ -17,20 +17,20 @@ namespace Cucumber
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Escenarios", SourceFile="Escenarios.feature", SourceLine=0)]
-    public partial class EscenariosFeature
+    [TechTalk.SpecRun.FeatureAttribute("TestSinLogearse", SourceFile="TestSinLogearse.feature", SourceLine=0)]
+    public partial class TestSinLogearseFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Escenarios.feature"
+#line 1 "TestSinLogearse.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Escenarios", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "TestSinLogearse", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,37 +66,24 @@ namespace Cucumber
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
+        [TechTalk.SpecRun.ScenarioAttribute("Testeando registro del usuario", new string[] {
+                "mytag2"}, SourceLine=4)]
+        public virtual void TesteandoRegistroDelUsuario()
         {
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Testeando registro del usuario", null, new string[] {
+                        "mytag2"});
 #line 5
- testRunner.Given("el correo del usario usuario1@correo.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 6
- testRunner.And("la contraseña 123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 7
- testRunner.When("el usaurio quiera iniciar session", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 8
- testRunner.Then("la pagina web redirecionara a vista del usuario con nombre: usuario1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("Background creando playlist", new string[] {
-                "mytag"}, SourceLine=10)]
-        public virtual void BackgroundCreandoPlaylist()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Background creando playlist", null, new string[] {
-                        "mytag"});
-#line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line 12
- testRunner.Given("el ususario quiera crear una nueva play list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 13
- testRunner.When("registre la playList con nombre listanuemro1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 14
- testRunner.Then("la web restra la play list y la muestra", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 6
+ testRunner.Given("el usuario no este logeado", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 7
+ testRunner.And("el nombre del usuario juan, su correo para ingresar nuevo@correo.com y su contras" +
+                    "eña 123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 8
+ testRunner.When("el usaurio quiera registrarse en SpotiFake", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
+ testRunner.Then("la pagina web redirecionara a vista del usuario con nombre: juan", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
