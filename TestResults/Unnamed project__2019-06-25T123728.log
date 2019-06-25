@@ -1,0 +1,130 @@
+﻿2019-06-25T12:37:28.1611663-05:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2019-06-25T12:37:28.1612307-05:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.0.352 in Framework netcore21 in x64 mode execution started
+2019-06-25T12:37:28.1612331-05:00;VSTestExecutionThread;Info;TestAdapter Location: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2019-06-25T12:37:28.1937846-05:00;VSTestExecutionThread;Info;SpecRun: running tests in D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T12:37:28.1940437-05:00;VSTestExecutionThread;Info;Output folder configured to "D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\TestResults" (default)
+2019-06-25T12:37:28.1941156-05:00;VSTestExecutionThread;Info;Profile: 
+2019-06-25T12:37:28.2385572-05:00;VSTestExecutionThread;Info;Log file path: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\TestResults\Unnamed project__2019-06-25T123728.log
+2019-06-25T12:37:28.2410540-05:00;VSTestExecutionThread;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T12:37:28.2461698-05:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2019-06-25T12:37:28.2539254-05:00;Thread#12;Info;Checking license
+2019-06-25T12:37:28.2543750-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T12:37:28.2555529-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T12:37:28.2851122-05:00;Thread#12;Info;Evaluation mode: test execution starts in 11 seconds... (this delay is removed in the registered version)
+2019-06-25T12:37:39.2857757-05:00;Thread#12;Info;Evaluation delay finished.
+2019-06-25T12:37:39.2926746-05:00;Thread#12;Info;License check completed
+2019-06-25T12:37:39.2928383-05:00;Thread#12;Info;starting test run
+2019-06-25T12:37:39.3006485-05:00;Thread#12;Info;Discovering target: Default
+2019-06-25T12:37:39.3009069-05:00;Thread#12;Info;Discovering tests from assembly: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T12:37:39.4000224-05:00;Thread#12;Info;Discovered tests from assembly: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T12:37:39.4018874-05:00:Test Suite Dump
+2019-06-25T12:37:39.4037880-05:00:#0: Unnamed project/ - 
+2019-06-25T12:37:39.4037991-05:00:#1: Default - 
+2019-06-25T12:37:39.4038006-05:00:#2: Cucumber - 
+2019-06-25T12:37:39.4038016-05:00:#3: Escenarios - 
+2019-06-25T12:37:39.4038225-05:00:#5: Testeando registro del usuario - TestAssembly:Cucumber/Feature:Escenarios/Scenario:Testeando+registro+del+usuario
+2019-06-25T12:37:39.4038740-05:00:End: Test Suite Dump
+2019-06-25T12:37:39.4237080-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T12:37:39.4260370-05:00:Thread#:Scheduler: testitem #5 from normal test queue 
+2019-06-25T12:37:39.4261158-05:00:Thread#0:Scheduler: considering testitem #5 for thread 0
+2019-06-25T12:37:39.4295721-05:00:Thread#0:TestItem#5:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T12:37:39.4295827-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadSpecific:False
+2019-06-25T12:37:39.4295841-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadUnspecific:False
+2019-06-25T12:37:39.4295857-05:00:Thread#0:Scheduler: using testitem #5 for thread 0
+2019-06-25T12:37:39.4308756-05:00:Thread#0:Scheduler: Test #5 is scheduled for thread
+2019-06-25T12:37:39.4319814-05:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2019-06-25T12:37:39.4370330-05:00:Thread #0: creating new test thread executor for Cucumber, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2019-06-25T12:37:39.4392730-05:00:Thread #0: Creating test assembly executor for execution model OutProc
+2019-06-25T12:37:39.4399658-05:00:Thread #0: Creating test assembly executor for execution model OutProc
+2019-06-25T12:37:39.4405421-05:00:using TechTalk.SpecRun.Framework.Execution.OutOfProc.StreamJsonRPC.OutOfProcessTestAssemblyExecutorHost to execute tests
+2019-06-25T12:37:39.4450867-05:00:Assembly resolving Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T12:37:39.4537114-05:00:starting Out Of Process Executor
+2019-06-25T12:37:39.5624140-05:00:Executing test executor at 'C:\Program Files\dotnet\dotnet.exe' '"D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\SpecFlowPlusRunner\netcoreapp2.1\TechTalk.SpecRun.Framework.Executor.anycpu.netcoreapp2_1.dll" 22016 2019-06-25T123728 "D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\TestResults"' in 'D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1'
+2019-06-25T12:37:39.5930267-05:00:Entering Memory Barrier for 29148
+2019-06-25T12:37:39.5930356-05:00:Leaving Memory Barrier for 29148
+2019-06-25T12:37:39.5977718-05:00:Out of Process Executor 29148 started
+2019-06-25T12:37:39.6028364-05:00:Waiting for endpoint
+2019-06-25T12:37:39.6045215-05:00:trying to connect to Out of Process Executor the 1 attempt
+2019-06-25T12:37:39.7612724-05:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=es-ES, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T12:37:39.7621063-05:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=es, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T12:37:39.7708022-05:00:Assembly resolving Microsoft.VisualStudio.Threading, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T12:37:39.7819630-05:00:Connection to Out of Process Executor established in the 1 attempt
+2019-06-25T12:37:41.1500920-05:00:waiting for Connection of SpecRun.Executor.29148.Logger ended
+2019-06-25T12:37:41.4540527-05:00:waiting for Connection of SpecRun.Executor.29148.Callback ended
+2019-06-25T12:37:41.6383730-05:00:2019-06-25T12:37:41.5380621-05:00:OutOfProcessTestAssemblyExecutor: initialized for D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll on test thread #0
+2019-06-25T12:37:41.6557052-05:00:Endpoint 29148 started
+2019-06-25T12:37:41.6818317-05:00:2019-06-25T12:37:41.6814208-05:00:OutOfProcessTestAssemblyExecutor: running tests...
+2019-06-25T12:37:41.8034201-05:00:Thread#0: Test #5/0 is started on thread #0
+2019-06-25T12:37:41.8131191-05:00:2019-06-25T12:37:41.8125816-05:00:Thread#0:T:2019-06-25T12:37:41.8104901-05:00:Assembly resolving TechTalk.SpecFlow, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2019-06-25T12:37:41.9658798-05:00:2019-06-25T12:37:41.9654861-05:00:Thread#0:T:-> Loading plugin D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\SpecRun.Runtime.SpecFlowPlugin.dll
+2019-06-25T12:37:41.9685400-05:00:2019-06-25T12:37:41.9681859-05:00:Thread#0:T:2019-06-25T12:37:41.9680794-05:00:Assembly resolving TechTalk.SpecFlow, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2019-06-25T12:37:41.9739147-05:00:2019-06-25T12:37:41.9736047-05:00:Thread#0:T:-> Using default config
+2019-06-25T12:37:41.9857615-05:00:2019-06-25T12:37:41.9854526-05:00:Thread#0:T:2019-06-25T12:37:41.9853454-05:00:Assembly resolving Microsoft.VisualStudio.TestPlatform.ObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T12:37:42.0227554-05:00:2019-06-25T12:37:42.0225314-05:00:Thread#0:B:Given el nombre del usuario juan, su correo para ingresar nuevo@correo.com y su contraseña 123
+2019-06-25T12:37:42.0449661-05:00:2019-06-25T12:37:42.0437621-05:00:Thread#0:T:2019-06-25T12:37:42.0436035-05:00:Assembly resolving WebDriver, Version=3.141.0.0, Culture=neutral, PublicKeyToken=null
+2019-06-25T12:37:42.2000785-05:00:Thread#0:TestItem#5:Scheduler: reschedule tests for testitem #5
+2019-06-25T12:37:42.2020386-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T12:37:42.2020915-05:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #5
+2019-06-25T12:37:42.2020973-05:00:Thread#0:Scheduler: considering testitem #5 for thread 0
+2019-06-25T12:37:42.2021243-05:00:Thread#0:TestItem#5:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T12:37:42.2021261-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadSpecific:False
+2019-06-25T12:37:42.2021272-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadUnspecific:False
+2019-06-25T12:37:42.2021285-05:00:Thread#0:Scheduler: using testitem #5 for thread 0
+2019-06-25T12:37:42.2021364-05:00:Thread#0:Scheduler: Test #5 is scheduled for thread
+2019-06-25T12:37:42.2021411-05:00:Thread#0:Scheduler: with testItemExecutionIndex 1
+2019-06-25T12:37:42.2428345-05:00:Thread#0: Test #5/0 is finished on thread #0 as Failed within 0,4387247 seconds
+2019-06-25T12:37:42.2464152-05:00:Thread#0: Test #5/1 is started on thread #0
+2019-06-25T12:37:42.2471405-05:00:2019-06-25T12:37:42.2468405-05:00:Thread#0:B:Given el nombre del usuario juan, su correo para ingresar nuevo@correo.com y su contraseña 123
+2019-06-25T12:37:42.2525721-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T12:37:42.2525784-05:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #5
+2019-06-25T12:37:42.2525800-05:00:Thread#0:Scheduler: considering testitem #5 for thread 0
+2019-06-25T12:37:42.2525976-05:00:Thread#0:TestItem#5:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T12:37:42.2525994-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadSpecific:False
+2019-06-25T12:37:42.2526003-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadUnspecific:False
+2019-06-25T12:37:42.2526030-05:00:Thread#0:Scheduler: using testitem #5 for thread 0
+2019-06-25T12:37:42.2526122-05:00:Thread#0:Scheduler: Test #5 is scheduled for thread
+2019-06-25T12:37:42.2526151-05:00:Thread#0:Scheduler: with testItemExecutionIndex 2
+2019-06-25T12:37:42.3465493-05:00:2019-06-25T12:37:42.3462700-05:00:OutOfProcessTestAssemblyExecutor: RunTest error: System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Threading.Tasks.Task.ContinueWith[TResult](Func`3 continuationFunction, Object state, TaskScheduler scheduler, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions)
+   at Microsoft.VisualStudio.Threading.AsyncSemaphore.LockWaitingHelper(Task waitTask)
+   at Microsoft.VisualStudio.Threading.AsyncSemaphore.EnterAsync(CancellationToken cancellationToken)
+   at StreamJsonRpc.DelimitedMessageHandler.WriteAsync(String content, CancellationToken cancellationToken)
+   at StreamJsonRpc.JsonRpc.InvokeCoreAsync[TResult](Nullable`1 id, String targetName, IReadOnlyList`1 arguments, CancellationToken cancellationToken, Boolean isParameterObject)
+   at TechTalk.SpecFlow.Plus.RPC.Client.Invoke(String methodName, Object[] parameters)
+   at TechTalk.SpecFlow.Plus.RPC.AsyncHelper.RunSync(Func`1 func)
+   at TechTalk.SpecRun.Framework.TestAssemblyExecutor.RunTests(TestThreadState testThreadState)
+   at TechTalk.SpecRun.Framework.Execution.OutOfProcess.OutOfProcessTestAssemblyExecutor.RunTests(TestThreadState testThreadState)
+2019-06-25T12:37:42.3473983-05:00:2019-06-25T12:37:42.3471530-05:00:OutOfProcessTestAssemblyExecutorReceiver - Error at RunTests - System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at System.Threading.Tasks.Task.ContinueWith[TResult](Func`3 continuationFunction, Object state, TaskScheduler scheduler, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions)
+   at Microsoft.VisualStudio.Threading.AsyncSemaphore.LockWaitingHelper(Task waitTask)
+   at Microsoft.VisualStudio.Threading.AsyncSemaphore.EnterAsync(CancellationToken cancellationToken)
+   at StreamJsonRpc.DelimitedMessageHandler.WriteAsync(String content, CancellationToken cancellationToken)
+   at StreamJsonRpc.JsonRpc.InvokeCoreAsync[TResult](Nullable`1 id, String targetName, IReadOnlyList`1 arguments, CancellationToken cancellationToken, Boolean isParameterObject)
+   at TechTalk.SpecFlow.Plus.RPC.Client.Invoke(String methodName, Object[] parameters)
+   at TechTalk.SpecFlow.Plus.RPC.AsyncHelper.RunSync(Func`1 func)
+   at TechTalk.SpecRun.Framework.TestAssemblyExecutor.RunTests(TestThreadState testThreadState)
+   at TechTalk.SpecRun.Framework.Execution.OutOfProcess.OutOfProcessTestAssemblyExecutor.RunTests(TestThreadState testThreadState)
+   at TechTalk.SpecRun.Framework.Execution.OutOfProcess.OutOfProcessTestAssemblyExecutorReceiver.RunTests(TestThreadState testThreadState)
+2019-06-25T12:37:42.3731783-05:00:test thread #0 error: StreamJsonRpc.RemoteInvocationException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at StreamJsonRpc.JsonRpc.InvokeCoreAsync[TResult](Nullable`1 id, String targetName, IReadOnlyList`1 arguments, CancellationToken cancellationToken, Boolean isParameterObject)
+   at TechTalk.SpecFlow.Plus.RPC.Client.Invoke[T](String methodName, Object[] parameters)
+   at TechTalk.SpecFlow.Plus.RPC.AsyncHelper.RunSync[TResult](Func`1 func)
+   at TechTalk.SpecRun.Framework.TestThread.Run(ITestExecutionManager executionManagerForRun, CancellationToken cancellationToken)
+   at TechTalk.SpecRun.Framework.AsyncTestThreadRunner.RunSync(TestExecutionManager executionManager, CancellationToken cancellationToken)
+2019-06-25T12:37:42.3749880-05:00:test thread error: TechTalk.SpecRun.Framework.SpecRunException: At least one test thread aborted. ---> StreamJsonRpc.RemoteInvocationException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at StreamJsonRpc.JsonRpc.InvokeCoreAsync[TResult](Nullable`1 id, String targetName, IReadOnlyList`1 arguments, CancellationToken cancellationToken, Boolean isParameterObject)
+   at TechTalk.SpecFlow.Plus.RPC.Client.Invoke[T](String methodName, Object[] parameters)
+   at TechTalk.SpecFlow.Plus.RPC.AsyncHelper.RunSync[TResult](Func`1 func)
+   at TechTalk.SpecRun.Framework.TestThread.Run(ITestExecutionManager executionManagerForRun, CancellationToken cancellationToken)
+   at TechTalk.SpecRun.Framework.AsyncTestThreadRunner.RunSync(TestExecutionManager executionManager, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+2019-06-25T12:37:42.3839186-05:00:Thread#-1: Test #5/2 is started on thread #-1
+2019-06-25T12:37:42.3839848-05:00:Thread#-1: Test #5/2 is finished on thread #-1 as Skipped within 2,38E-05 seconds
+2019-06-25T12:37:42.3842486-05:00:Thread#-1:Scheduler: get next test for thread -1
+2019-06-25T12:37:42.3842537-05:00:Thread#:Scheduler: at the end of normal test queue
+2019-06-25T12:37:42.3842551-05:00:Thread#-1:Scheduler: enumerator for thread is at end
+2019-06-25T12:37:42.3933574-05:00;Thread#12;Info;test run finished
+2019-06-25T12:37:42.3935057-05:00;Thread#12;Info;publishing test results
+2019-06-25T12:37:42.3936767-05:00;Thread#12;Info;Not publishing results.
+2019-06-25T12:37:42.3937132-05:00;Thread#12;Info;test results published
+2019-06-25T12:37:42.3938012-05:00;Thread#12;Info;generating reports

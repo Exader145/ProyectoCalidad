@@ -1,0 +1,105 @@
+﻿2019-06-25T11:33:17.7747382-05:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2019-06-25T11:33:17.7748070-05:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.0.352 in Framework netcore21 in x64 mode execution started
+2019-06-25T11:33:17.7748096-05:00;VSTestExecutionThread;Info;TestAdapter Location: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2019-06-25T11:33:17.8078990-05:00;VSTestExecutionThread;Info;SpecRun: running tests in D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T11:33:17.8081392-05:00;VSTestExecutionThread;Info;Output folder configured to "D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\TestResults" (default)
+2019-06-25T11:33:17.8082561-05:00;VSTestExecutionThread;Info;Profile: 
+2019-06-25T11:33:17.8751450-05:00;VSTestExecutionThread;Info;Log file path: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\TestResults\Unnamed project__2019-06-25T113317.log
+2019-06-25T11:33:17.8776447-05:00;VSTestExecutionThread;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T11:33:17.8829165-05:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2019-06-25T11:33:17.8893146-05:00;Thread#12;Info;Checking license
+2019-06-25T11:33:17.8897079-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T11:33:17.8908700-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T11:33:17.9130288-05:00;Thread#12;Info;Evaluation mode: test execution starts in 14 seconds... (this delay is removed in the registered version)
+2019-06-25T11:33:31.9142213-05:00;Thread#12;Info;Evaluation delay finished.
+2019-06-25T11:33:31.9227964-05:00;Thread#12;Info;License check completed
+2019-06-25T11:33:31.9229122-05:00;Thread#12;Info;starting test run
+2019-06-25T11:33:31.9302553-05:00;Thread#12;Info;Discovering target: Default
+2019-06-25T11:33:31.9304070-05:00;Thread#12;Info;Discovering tests from assembly: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T11:33:32.0171040-05:00;Thread#12;Info;Discovered tests from assembly: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T11:33:32.0185064-05:00:Test Suite Dump
+2019-06-25T11:33:32.0206176-05:00:#0: Unnamed project/ - 
+2019-06-25T11:33:32.0206443-05:00:#1: Default - 
+2019-06-25T11:33:32.0206458-05:00:#2: Cucumber - 
+2019-06-25T11:33:32.0206468-05:00:#3: Escenarios - 
+2019-06-25T11:33:32.0238452-05:00:#4: testeando login ingreso - TestAssembly:Cucumber/Feature:Escenarios/Scenario:testeando+login+ingreso
+2019-06-25T11:33:32.0238698-05:00:#5: Testeando registro del usuario - TestAssembly:Cucumber/Feature:Escenarios/Scenario:Testeando+registro+del+usuario
+2019-06-25T11:33:32.0239988-05:00:End: Test Suite Dump
+2019-06-25T11:33:32.0478846-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T11:33:32.0531435-05:00:Thread#:Scheduler: testitem #4 from normal test queue 
+2019-06-25T11:33:32.0532198-05:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2019-06-25T11:33:32.0568383-05:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T11:33:32.0568443-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2019-06-25T11:33:32.0568457-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2019-06-25T11:33:32.0568473-05:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2019-06-25T11:33:32.0581048-05:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2019-06-25T11:33:32.0591970-05:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2019-06-25T11:33:32.0618800-05:00:Thread #0: creating new test thread executor for Cucumber, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2019-06-25T11:33:32.0639752-05:00:Thread #0: Creating test assembly executor for execution model OutProc
+2019-06-25T11:33:32.0646000-05:00:Thread #0: Creating test assembly executor for execution model OutProc
+2019-06-25T11:33:32.0651041-05:00:using TechTalk.SpecRun.Framework.Execution.OutOfProc.StreamJsonRPC.OutOfProcessTestAssemblyExecutorHost to execute tests
+2019-06-25T11:33:32.1093702-05:00:Assembly resolving Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T11:33:32.1175384-05:00:starting Out Of Process Executor
+2019-06-25T11:33:32.2544634-05:00:Executing test executor at 'C:\Program Files\dotnet\dotnet.exe' '"D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\SpecFlowPlusRunner\netcoreapp2.1\TechTalk.SpecRun.Framework.Executor.anycpu.netcoreapp2_1.dll" 20060 2019-06-25T113317 "D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\TestResults"' in 'D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1'
+2019-06-25T11:33:32.2782935-05:00:Entering Memory Barrier for 23456
+2019-06-25T11:33:32.2783028-05:00:Leaving Memory Barrier for 23456
+2019-06-25T11:33:32.2858986-05:00:Out of Process Executor 23456 started
+2019-06-25T11:33:32.2956431-05:00:Waiting for endpoint
+2019-06-25T11:33:32.2970164-05:00:trying to connect to Out of Process Executor the 1 attempt
+2019-06-25T11:33:32.6089043-05:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=es-ES, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T11:33:32.6109475-05:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=es, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T11:33:32.6117412-05:00:Assembly resolving Microsoft.VisualStudio.Threading, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T11:33:32.6233362-05:00:Connection to Out of Process Executor established in the 1 attempt
+2019-06-25T11:33:34.2009833-05:00:waiting for Connection of SpecRun.Executor.23456.Logger ended
+2019-06-25T11:33:34.5134834-05:00:waiting for Connection of SpecRun.Executor.23456.Callback ended
+2019-06-25T11:33:34.6808955-05:00:2019-06-25T11:33:34.5900640-05:00:OutOfProcessTestAssemblyExecutor: initialized for D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll on test thread #0
+2019-06-25T11:33:34.6954824-05:00:Endpoint 23456 started
+2019-06-25T11:33:34.7168582-05:00:2019-06-25T11:33:34.7162947-05:00:OutOfProcessTestAssemblyExecutor: running tests...
+2019-06-25T11:33:34.8271825-05:00:Thread#0: Test #4/0 is started on thread #0
+2019-06-25T11:33:34.8377246-05:00:2019-06-25T11:33:34.8373040-05:00:Thread#0:T:2019-06-25T11:33:34.8354072-05:00:Assembly resolving TechTalk.SpecFlow, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2019-06-25T11:33:35.0162168-05:00:2019-06-25T11:33:35.0158126-05:00:Thread#0:T:-> Loading plugin D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\SpecRun.Runtime.SpecFlowPlugin.dll
+2019-06-25T11:33:35.0365624-05:00:2019-06-25T11:33:35.0362517-05:00:Thread#0:T:2019-06-25T11:33:35.0360700-05:00:Assembly resolving TechTalk.SpecFlow, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41
+2019-06-25T11:33:35.0407590-05:00:2019-06-25T11:33:35.0405043-05:00:Thread#0:T:-> Using default config
+2019-06-25T11:33:35.0520080-05:00:2019-06-25T11:33:35.0515540-05:00:Thread#0:T:2019-06-25T11:33:35.0513429-05:00:Assembly resolving Microsoft.VisualStudio.TestPlatform.ObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T11:33:35.0871580-05:00:2019-06-25T11:33:35.0867693-05:00:Thread#0:B:Given el correo del usario usuario1@correo.com
+2019-06-25T11:33:35.1124744-05:00:2019-06-25T11:33:35.1111026-05:00:Thread#0:T:2019-06-25T11:33:35.1108578-05:00:Assembly resolving WebDriver, Version=3.141.0.0, Culture=neutral, PublicKeyToken=null
+2019-06-25T11:33:38.4002797-05:00:2019-06-25T11:33:38.3988071-05:00:Thread#0:T:done: EscenariosSteps.GivenElCorreoDelUsario("usuario1@correo.com") (3,3s)
+2019-06-25T11:33:38.4017928-05:00:2019-06-25T11:33:38.4016327-05:00:Thread#0:B:And la contraseña 123
+2019-06-25T11:33:39.5069614-05:00:2019-06-25T11:33:39.5065914-05:00:Thread#0:T:done: EscenariosSteps.GivenLaContrasena("123") (1,1s)
+2019-06-25T11:33:39.5141410-05:00:2019-06-25T11:33:39.5139481-05:00:Thread#0:B:When el usaurio quiera iniciar session
+2019-06-25T11:33:44.0681207-05:00:2019-06-25T11:33:44.0674658-05:00:Thread#0:T:done: EscenariosSteps.WhenElUsaurioQuieraIniciarSession() (4,6s)
+2019-06-25T11:33:44.0694496-05:00:2019-06-25T11:33:44.0692023-05:00:Thread#0:B:Then la pagina web redirecionara a vista del usuario con nombre: usuario1
+2019-06-25T11:33:44.0706503-05:00:2019-06-25T11:33:44.0703903-05:00:Thread#0:T:2019-06-25T11:33:44.0701596-05:00:Assembly resolving Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T11:33:46.2522049-05:00:2019-06-25T11:33:46.2514647-05:00:Thread#0:T:done: EscenariosSteps.ThenLaInterfazDeLaWebCambiaraALaPaginaInicioDelUsuario("usuario1") (2,2s)
+2019-06-25T11:33:46.2671367-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T11:33:46.2671673-05:00:Thread#:Scheduler: testitem #5 from normal test queue 
+2019-06-25T11:33:46.2671710-05:00:Thread#0:Scheduler: considering testitem #5 for thread 0
+2019-06-25T11:33:46.2672048-05:00:Thread#0:TestItem#5:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T11:33:46.2672090-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadSpecific:False
+2019-06-25T11:33:46.2672117-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadUnspecific:False
+2019-06-25T11:33:46.2672130-05:00:Thread#0:Scheduler: using testitem #5 for thread 0
+2019-06-25T11:33:46.2672464-05:00:Thread#0:Scheduler: Test #5 is scheduled for thread
+2019-06-25T11:33:46.2672586-05:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2019-06-25T11:33:46.3271267-05:00:Thread#0: Test #4/0 is finished on thread #0 as Succeeded within 11,4991131 seconds
+2019-06-25T11:33:46.3303259-05:00:Thread#0: Test #5/0 is started on thread #0
+2019-06-25T11:33:46.3320119-05:00:2019-06-25T11:33:46.3318010-05:00:Thread#0:B:Given el nombre del usuario juan, su correo para ingresar nuevo@correo.com y su contraseña 123
+2019-06-25T11:33:55.0089641-05:00:2019-06-25T11:33:55.0083966-05:00:Thread#0:T:error: no such element: Unable to locate element: {"method":"id","selector":"inputPass"}
+2019-06-25T11:33:55.0092798-05:00:2019-06-25T11:33:55.0091633-05:00:Thread#0:T:  (Session info: chrome=75.0.3770.100)
+2019-06-25T11:33:55.0094632-05:00:2019-06-25T11:33:55.0093582-05:00:Thread#0:T:  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17763 x86_64)
+2019-06-25T11:33:55.0103648-05:00:2019-06-25T11:33:55.0101826-05:00:Thread#0:B:When el usaurio quiera registrarse en SpotiFake
+2019-06-25T11:33:55.0108787-05:00:2019-06-25T11:33:55.0106580-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T11:33:55.0111231-05:00:2019-06-25T11:33:55.0110228-05:00:Thread#0:B:Then la pagina web redirecionara a vista del usuario con nombre: juan
+2019-06-25T11:33:55.0113225-05:00:2019-06-25T11:33:55.0112347-05:00:Thread#0:T:skipped because of previous errors
+2019-06-25T11:33:55.0414288-05:00:Thread#0:TestItem#5:Scheduler: reschedule tests for testitem #5
+2019-06-25T11:33:55.0417554-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T11:33:55.0418134-05:00:Thread#:Scheduler: dequeuing a rescheduled testitem: #5
+2019-06-25T11:33:55.0418152-05:00:Thread#0:Scheduler: considering testitem #5 for thread 0
+2019-06-25T11:33:55.0418409-05:00:Thread#0:TestItem#5:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T11:33:55.0418426-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadSpecific:False
+2019-06-25T11:33:55.0418436-05:00:Thread#0:TestItem#5:runsOnOneOtherThreadUnspecific:False
+2019-06-25T11:33:55.0418490-05:00:Thread#0:Scheduler: using testitem #5 for thread 0
+2019-06-25T11:33:55.0418588-05:00:Thread#0:Scheduler: Test #5 is scheduled for thread
+2019-06-25T11:33:55.0418638-05:00:Thread#0:Scheduler: with testItemExecutionIndex 1
+2019-06-25T11:33:55.0428553-05:00:Thread#0: Test #5/0 is finished on thread #0 as Failed within 8,7123259 seconds
+2019-06-25T11:33:55.0432750-05:00:Thread#0: Test #5/1 is started on thread #0
+2019-06-25T11:33:55.0439669-05:00:2019-06-25T11:33:55.0437516-05:00:Thread#0:B:Given el nombre del usuario juan, su correo para ingresar nuevo@correo.com y su contraseña 123

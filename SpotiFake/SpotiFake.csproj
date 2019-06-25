@@ -172,6 +172,7 @@
     <Compile Include="Interface\Validations\IAdministradorValidation.cs" />
     <Compile Include="Interface\Validations\ICancionValidation.cs" />
     <Compile Include="Managers\SessionManager.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cancion.cs" />
     <Compile Include="Models\CancionesEscuchadas.cs" />
     <Compile Include="Models\DetalleUsuario.cs" />
