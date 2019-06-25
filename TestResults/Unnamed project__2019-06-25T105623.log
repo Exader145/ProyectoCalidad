@@ -1,0 +1,55 @@
+﻿2019-06-25T10:56:23.6834168-05:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2019-06-25T10:56:23.6835033-05:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.0.352 in Framework netcore21 in x64 mode execution started
+2019-06-25T10:56:23.6835220-05:00;VSTestExecutionThread;Info;TestAdapter Location: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2019-06-25T10:56:23.7126258-05:00;VSTestExecutionThread;Info;SpecRun: running tests in D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T10:56:23.7128482-05:00;VSTestExecutionThread;Info;Output folder configured to "D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\TestResults" (default)
+2019-06-25T10:56:23.7128857-05:00;VSTestExecutionThread;Info;Profile: 
+2019-06-25T10:56:23.7551828-05:00;VSTestExecutionThread;Info;Log file path: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\TestResults\Unnamed project__2019-06-25T105623.log
+2019-06-25T10:56:23.7572347-05:00;VSTestExecutionThread;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T10:56:23.7627174-05:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2019-06-25T10:56:23.7699810-05:00;Thread#12;Info;Checking license
+2019-06-25T10:56:23.7702974-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T10:56:23.7714522-05:00;Thread#12;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-06-25T10:56:23.8027589-05:00;Thread#12;Info;Evaluation mode: test execution starts in 11 seconds... (this delay is removed in the registered version)
+2019-06-25T10:56:34.8035167-05:00;Thread#12;Info;Evaluation delay finished.
+2019-06-25T10:56:34.8219140-05:00;Thread#12;Info;License check completed
+2019-06-25T10:56:34.8220708-05:00;Thread#12;Info;starting test run
+2019-06-25T10:56:34.8280613-05:00;Thread#12;Info;Discovering target: Default
+2019-06-25T10:56:34.8282556-05:00;Thread#12;Info;Discovering tests from assembly: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T10:56:34.9288943-05:00;Thread#12;Info;Discovered tests from assembly: D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\Cucumber.dll
+2019-06-25T10:56:34.9307012-05:00:Test Suite Dump
+2019-06-25T10:56:34.9335418-05:00:#0: Unnamed project/ - 
+2019-06-25T10:56:34.9335757-05:00:#1: Default - 
+2019-06-25T10:56:34.9335774-05:00:#2: Cucumber - 
+2019-06-25T10:56:34.9335786-05:00:#3: Escenarios - 
+2019-06-25T10:56:34.9368312-05:00:#4: testeando login ingreso - TestAssembly:Cucumber/Feature:Escenarios/Scenario:testeando+login+ingreso
+2019-06-25T10:56:34.9368678-05:00:#5: Testeando registro del usuario - TestAssembly:Cucumber/Feature:Escenarios/Scenario:Testeando+registro+del+usuario
+2019-06-25T10:56:34.9369270-05:00:End: Test Suite Dump
+2019-06-25T10:56:34.9587035-05:00:Thread#0:Scheduler: get next test for thread 0
+2019-06-25T10:56:34.9622273-05:00:Thread#:Scheduler: testitem #4 from normal test queue 
+2019-06-25T10:56:34.9622873-05:00:Thread#0:Scheduler: considering testitem #4 for thread 0
+2019-06-25T10:56:34.9662147-05:00:Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+2019-06-25T10:56:34.9662237-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+2019-06-25T10:56:34.9662252-05:00:Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+2019-06-25T10:56:34.9662274-05:00:Thread#0:Scheduler: using testitem #4 for thread 0
+2019-06-25T10:56:34.9675475-05:00:Thread#0:Scheduler: Test #4 is scheduled for thread
+2019-06-25T10:56:34.9685952-05:00:Thread#0:Scheduler: with testItemExecutionIndex 0
+2019-06-25T10:56:34.9714693-05:00:Thread #0: creating new test thread executor for Cucumber, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+2019-06-25T10:56:34.9736758-05:00:Thread #0: Creating test assembly executor for execution model OutProc
+2019-06-25T10:56:34.9743912-05:00:Thread #0: Creating test assembly executor for execution model OutProc
+2019-06-25T10:56:34.9748205-05:00:using TechTalk.SpecRun.Framework.Execution.OutOfProc.StreamJsonRPC.OutOfProcessTestAssemblyExecutorHost to execute tests
+2019-06-25T10:56:35.0853097-05:00:Assembly resolving Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T10:56:35.0926998-05:00:starting Out Of Process Executor
+2019-06-25T10:56:35.2269291-05:00:Executing test executor at 'C:\Program Files\dotnet\dotnet.exe' '"D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1\SpecFlowPlusRunner\netcoreapp2.1\TechTalk.SpecRun.Framework.Executor.anycpu.netcoreapp2_1.dll" 14688 2019-06-25T105623 "D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\TestResults"' in 'D:\UPN2019-1\CalidadPruebasDeSoftware\ProyectoT4\SpotiFake\Cucumber\bin\Debug\netcoreapp2.1'
+2019-06-25T10:56:35.2519359-05:00:Entering Memory Barrier for 16276
+2019-06-25T10:56:35.2519446-05:00:Leaving Memory Barrier for 16276
+2019-06-25T10:56:35.2587147-05:00:Out of Process Executor 16276 started
+2019-06-25T10:56:35.2691819-05:00:Waiting for endpoint
+2019-06-25T10:56:35.2707769-05:00:trying to connect to Out of Process Executor the 1 attempt
+2019-06-25T10:56:35.6567942-05:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=es-ES, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T10:56:35.6576091-05:00:Assembly resolving StreamJsonRpc.resources, Version=1.4.0.0, Culture=es, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T10:56:35.6583105-05:00:Assembly resolving Microsoft.VisualStudio.Threading, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T10:56:35.6693653-05:00:Connection to Out of Process Executor established in the 1 attempt
+2019-06-25T10:56:36.2622241-05:00:Assembly resolving System.Runtime.Extensions.resources, Version=4.2.1.0, Culture=es-ES, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T10:56:36.2626036-05:00:Assembly resolving System.Runtime.Extensions.resources, Version=4.2.1.0, Culture=es, PublicKeyToken=b03f5f7f11d50a3a
+2019-06-25T10:56:36.2737977-05:00:waiting for Connection of SpecRun.Executor.16276.Logger ended
