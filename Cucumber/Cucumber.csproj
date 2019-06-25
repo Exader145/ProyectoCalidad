@@ -23,6 +23,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Escenarios.feature</DependentUpon>
     </Compile>
+    <Compile Update="TestSinLogearse.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TestSinLogearse.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +41,10 @@
     <SpecFlowFeatureFiles Update="Escenarios.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Escenarios.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="TestSinLogearse.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TestSinLogearse.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
   </ItemGroup>
 
