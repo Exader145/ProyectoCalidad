@@ -1,4 +1,5 @@
 ﻿using SpotiFake.DataBase.Mapeo;
+using SpotiFake.Interface;
 using SpotiFake.Models;
 using System;
 using System.Collections.Generic;

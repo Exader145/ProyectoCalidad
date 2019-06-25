@@ -47,6 +47,9 @@ namespace Cucumber
             driver.Close();
         }
 
+
+
+
         [Given(@"el usuario no este logeado")]
         public void GivenRegistroUsuario()
         {
